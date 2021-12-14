@@ -21,11 +21,11 @@ Options:
   -i, --init PATH           Start a new project on the path.
 `;
 
-async function build(file) {
+async function build(file, files) {
   try {
     let source = await import('./' + relative(dirname(fileURLToPath(import.meta.url)), file))
     let output = file.replace(/\.[jt]sx?$/, '.css')
-    if(files.length == 1)
+    if(files == 1)
       output = argv.o || argv.output || output
     else if(argv.o || argv.output)
         output = resolve(argv.o || argv.output, output)
@@ -37,13 +37,13 @@ async function build(file) {
   }
 }
 
-function dev(file) {
+function dev(file, files) {
   let fsWait = false;
   watch(file, (event, filename) => {
     if (filename) {
       if (fsWait) return;
       fsWait = setTimeout(() => {
-        build()
+        build(file, files)
         fsWait = false;
       }, 100);
     }
@@ -60,9 +60,9 @@ else {
   let files = globbySync(argv._, {})
   console.log(`Processing ${files.length} files(${files[0] || ''}, ...)`)
   files.forEach(file => {
-    build(file)
+    build(file, files.length)
     if (argv.d || argv.dev) {
-      dev(file)
+      dev(file, files.length)
     }
   })
 }
