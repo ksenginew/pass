@@ -11,5 +11,5 @@ test('test cli', () => {
             return
         }
     });
-    expect(readFileSync('fortest.css').toString()).toBe('this is CSS')
+    expect(readFileSync('bin/fortest.css').toString()).toBe('this is CSS')
 })
