@@ -22,7 +22,7 @@ Options:
 
 async function build(file) {
   try {
-    let source = await import(relative(__dirname, file))
+    let source = await import(relative(import.meta.url, file))
     writeFileSync(resolve((argv.o || argv.output) + (files.length == 1 ? '' : ('/' + file)), source.default))
     console.log(`Successfully built "${file}"`)
   }
