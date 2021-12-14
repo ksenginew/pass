@@ -8,7 +8,7 @@ import { relative, resolve } from 'path';
 let argv = minimist(process.argv.slice(2));
 
 const version = '0.0.0'
-const doc = `Generate css from pass.js files that containing default exports.
+const doc = `Generate css from source files that containing default exports.
 Usage:
   pass-lang filename [-o=<outfile>] [-d]
   pass-lang glob [-o=<outdir>] [-d]
@@ -22,8 +22,13 @@ Options:
 
 async function build(file) {
   try {
-    let source = await import(relative(import.meta.url, file))
-    writeFileSync(resolve((argv.o || argv.output) + (files.length == 1 ? '' : ('/' + file)), source.default))
+    let source = await import('./' + relative(import.meta.url, file))
+    let output = file.replace(/\.[jt]sx?$/, '.css')
+    if(files.length == 1)
+      output = argv.o || argv.output || output
+    else if(argv.o || argv.output)
+        output = resolve(argv.o || argv.output, output)
+    writeFileSync(output, source.default))
     console.log(`Successfully built "${file}"`)
   }
   catch (error) {
