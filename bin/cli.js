@@ -28,7 +28,7 @@ async function build(file) {
       output = argv.o || argv.output || output
     else if(argv.o || argv.output)
         output = resolve(argv.o || argv.output, output)
-    writeFileSync(output, source.default))
+    writeFileSync(output, source.default)
     console.log(`Successfully built "${file}"`)
   }
   catch (error) {
