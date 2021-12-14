@@ -42,6 +42,7 @@ function dev(file) {
     }
   });
 }
+
 if (argv.v || argv.version) {
   console.log(version)
 }
@@ -50,6 +51,7 @@ else if (argv.h || argv.help) {
 }
 else {
   let files = globbySync(argv._, {})
+  console.log(`Processing ${files.length} files(${files[0] || ''}, ...)`)
   files.forEach(file => {
     build(file)
     if (argv.d || argv.dev) {
