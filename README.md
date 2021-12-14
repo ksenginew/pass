@@ -1,7 +1,8 @@
 # PASS
 Next generation CSS preprocessor. It's programmatically awesome.
 
-```css
+```js
+css`
 ${base} /* including imported CSS*/
 
 nav {
@@ -18,5 +19,5 @@ nav {
   a {
     ${equal_heights}/* extending styles */
   }
-}
+}`
 ```
