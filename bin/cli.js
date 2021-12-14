@@ -22,6 +22,7 @@ Options:
 
 async function build(file) {
   try {
+    console.log(import.meta.url)
     let source = await import('./' + relative(dirname(import.meta.url), file))
     let output = file.replace(/\.[jt]sx?$/, '.css')
     if(files.length == 1)
