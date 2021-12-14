@@ -1,0 +1,25 @@
+{
+  "name": "pass",
+  "version": "1.0.0",
+  "description": "Next generation CSS preprocessor. It's programmatically awesome.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksenginew/PASS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ksenginew/PASS/issues"
+  },
+  "homepage": "https://github.com/ksenginew/PASS#readme",
+  "devDependencies": {
+    "microbundle": "^0.14.2",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.4"
+  }
+}
