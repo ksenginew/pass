@@ -3,6 +3,7 @@
 import minimist from 'minimist';
 import { globbySync } from 'globby';
 import { writeFileSync, watch } from 'fs';
+import { relative, resolve } from 'path';
 
 let argv = minimist(process.argv.slice(2));
 
@@ -21,8 +22,8 @@ Options:
 
 async function build(file) {
   try {
-    let source = await import('./' + file)
-    writeFileSync((argv.o || argv.output) + (files.length == 1 ? '' : ('/' + file)), source.default)
+    let source = await import(relative(__dirname, file))
+    writeFileSync(resolve((argv.o || argv.output) + (files.length == 1 ? '' : ('/' + file)), source.default))
     console.log(`Successfully built "${file}"`)
   }
   catch (error) {
