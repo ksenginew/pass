@@ -4,11 +4,16 @@ Next generation CSS preprocessor. It's programmatically awesome.
 ```js
 import base from 'base';
 
-var font_stack: 'Helvetica, sans-serif'
+let font_stack: 'Helvetica, sans-serif'
 
-var theme = (theme ='DarkGray')  => ({
-  box-shadow: `0 0 1px rgba(${theme}, .25)`;
+let theme = (theme ='DarkGray')  => ({
+  box_shadow: `0 0 1px rgba(${theme}, .25)`
 })
+
+let equal_heights = {
+  display: 'flex',
+  flex_wrap: 'wrap',
+};
 
 css`
 ${base}
@@ -17,10 +22,10 @@ nav {
     font: 100% ${font_stack};
   }
 
-  li { display: inline-block; }
+  li { ${theme()} }
 
   a {
-    display: block;
+    ${equal_heights}
   }
 }
 `
