@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Next generation CSS preprocessor. It's programmatically awesome.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "jest"
   },
