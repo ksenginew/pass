@@ -19,7 +19,7 @@ Options:
   -i, --init PATH           Start a new project on the path.
 `;
 
-function build(file) {
+async function build(file) {
   try {
     let source = await import('./' + file)
     writeFileSync((argv.o || argv.output) + (files.length == 1 ? '' : ('/' + file)), source.default)
