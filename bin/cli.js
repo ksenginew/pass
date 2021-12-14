@@ -4,6 +4,7 @@ import minimist from 'minimist';
 import { globbySync } from 'globby';
 import { writeFileSync, watch } from 'fs';
 import { relative, resolve, dirname } from 'path';
+import { fileURLToPath } from 'url';
 
 let argv = minimist(process.argv.slice(2));
 
@@ -22,8 +23,7 @@ Options:
 
 async function build(file) {
   try {
-    console.log(import.meta.url)
-    let source = await import('./' + relative(dirname(import.meta.url), file))
+    let source = await import('./' + relative(dirname(fileURLToPath(import.meta.url)), file))
     let output = file.replace(/\.[jt]sx?$/, '.css')
     if(files.length == 1)
       output = argv.o || argv.output || output
