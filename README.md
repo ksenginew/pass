@@ -19,5 +19,6 @@ nav {
   a {
     ${equal_heights}/* extending styles */
   }
-}`
+}
+`
 ```

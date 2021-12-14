@@ -1,6 +1,6 @@
 import { exec } from "child_process"
 import { readFileSync } from 'fs'
-test(() => {
+test('test cli',() => {
     exec("node bin/cli.js fortest.js fortest.css", (error, stdout, stderr) => {
         if (error) {
             throw error
