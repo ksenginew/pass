@@ -4,10 +4,10 @@ let minimist = require('minimist');
 let glob = require('glob');
 let { writeFileSync, watch } = require('fs');
 let { relative, resolve } = require('path');
+let { version } = require('../package.json');
 
 let argv = minimist(process.argv.slice(2));
 
-const version = '0.0.0';
 const doc = `Generate css from source files that containing default exports.
 Usage:
   pass-lang filename [-o=<outfile>] [-d]
