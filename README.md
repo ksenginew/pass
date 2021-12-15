@@ -5,23 +5,23 @@ Next generation CSS preprocessor. It's programmatically awesome.
 > ```
 
 ```js
-css`
-${base} /* including imported CSS*/
+import base from './css' // import modules
 
+css`
 nav {
   width: ${10 + 10}px; /* operators */
+}
 
-  ul {
-    font: 100% ${font_stack}; /* using variables */
-  }
+ul {
+  font: 100% ${font_stack}; /* using variables */
+}
 
-  li {
-    ${theme()} /* using functions / mixins */
-  }
+li {
+  ${theme()} /* using functions / mixins */
+}
 
-  a {
-    ${equal_heights}/* extending styles */
-  }
+a {
+  ${equal_heights}/* extending styles */
 }
 `
 ```
