@@ -1,10 +1,10 @@
 {
-  "name": "pass-lang",
-  "version": "1.0.0",
-  "description": "Next generation CSS preprocessor. It's programmatically awesome. > ```diff > - currently in development > ```",
-  "main": "jest.config.js",
+  "name": "pass-lang-monorepo",
+  "version": "0.0.1",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "build": "pnpm run build -r",
+    "dev": "pnpm run watch --parallel"
   },
   "repository": {
     "type": "git",
@@ -12,12 +12,17 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ksenginew/pass-lang/issues"
   },
   "homepage": "https://github.com/ksenginew/pass-lang#readme",
   "devDependencies": {
+    "@types/jest": "^27.0.3",
+    "jest": "^27.4.5",
+    "microbundle": "^0.14.2",
+    "prettier": "^2.5.1",
+    "ts-jest": "^27.1.1",
     "typescript": "^4.5.4"
   }
 }

@@ -5,7 +5,7 @@
   "source": "index.ts",
   "main": "dist/sass.js",
   "umd:main": "dist/sass.umd.js",
-  "module": "dist/sass.esm.js", 
+  "module": "dist/sass.esm.js",
   "exports": {
     "require": "./dist/sass.js",
     "default": "./dist/sass.modern.js"

@@ -2,14 +2,21 @@
   "name": "pass-lang",
   "version": "0.0.1",
   "description": "Next generation CSS preprocessor. It's programmatically awesome.",
-  "main": "index.js",
   "bin": {
     "pass": "bin/cli.js"
   },
+  "source": "index.ts",
+  "main": "dist/pass-lang.js",
+  "umd:main": "dist/pass-lang.umd.js",
+  "module": "dist/pass-lang.esm.js",
+  "exports": {
+    "require": "./dist/pass-lang.js",
+    "default": "./dist/pass-lang.modern.js"
+  },
+  "types": "dist/pass-lang.d.ts",
   "scripts": {
-    "test": "jest",
-    "build": "pnpm run build -r",
-    "dev": "pnpm run watch --parallel"
+    "build": "microbundle",
+    "dev": "microbundle watch"
   },
   "repository": {
     "type": "git",
@@ -22,14 +29,6 @@
     "url": "https://github.com/ksenginew/pass-lang/issues"
   },
   "homepage": "https://github.com/ksenginew/pass-lang#readme",
-  "devDependencies": {
-    "@types/jest": "^27.0.3",
-    "jest": "^27.4.5",
-    "microbundle": "^0.14.2",
-    "prettier": "^2.5.1",
-    "ts-jest": "^27.1.1",
-    "typescript": "^4.5.4"
-  },
   "dependencies": {
     "globby": "^12.0.2",
     "minimist": "^1.2.5",
