@@ -27,4 +27,4 @@ a {
 ```
 
 ### Extensions
-- [Sass and SCSS support](https://github.com/ksenginew/pass-lang/tree/main/packages/sass)
+- [Sass and SCSS support](https://github.com/ksenginew/pass-lang/tree/main/packages/sass#readme)
