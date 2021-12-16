@@ -5,7 +5,7 @@
   "bin": {
     "pass": "bin/cli.js"
   },
-  "source": "index.ts",
+  "source": "src/index.ts",
   "main": "dist/pass-lang.js",
   "umd:main": "dist/pass-lang.umd.js",
   "module": "dist/pass-lang.esm.js",
