@@ -104,11 +104,21 @@ Your SCSS here...
 ```js
 import { sass } from '@pass/sass';
 
-sass.css`
+sass().css`
 Your SASS here...
 `
 ```
-You can pass options to `sass` and `scss` functions. Read [Here](https://sass-lang.com/documentation/js-api/interfaces/StringOptionsWithoutImporter) for more information about options.
+
+You can pass options to `sass` and `scss` functions.
+
+```js
+options = { style: "compressed" } // options
+sass(options).css`
+Your SASS here...
+`
+```
+
+Read [Here](https://sass-lang.com/documentation/js-api/interfaces/StringOptionsWithoutImporter) for more information about options.
 
 **Read [Sass docs](https://sass-lang.com/documentation/js-api) for complete documentation.**
 
