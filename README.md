@@ -25,34 +25,6 @@ a {
 }
 `
 ```
-### Sass support
-```js
-import { css as pass } from 'pass-lang'
-import * as sass from 'sass'
 
-// for scss
-let css = (...args) => sass.compileString(pass(...args))
-// or for sass
-// let css = (...args) => sass.compileString(pass(...args), { style: 'indented' })
-
-// You can choose sass or scss
-export default css`
-nav {
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  li { display: inline-block; }
-
-  a {
-    display: block;
-    padding: 6px 12px;
-    text-decoration: none;
-  }
-}
-`
-```
-
-
+### Extensions
+- [Sass and SCSS support](https://github.com/ksenginew/pass-lang/tree/main/packages/sass)
