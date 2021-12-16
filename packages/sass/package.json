@@ -2,9 +2,18 @@
   "name": "@pass-lang/sass",
   "version": "0.0.1",
   "description": "Sass support for next generation CSS preprocessor.",
-  "main": "index.js",
+  "source": "index.ts",
+  "main": "dist/sass.js",
+  "umd:main": "dist/sass.umd.js",
+  "module": "dist/sass.esm.js", 
+  "exports": {
+    "require": "./dist/sass.js",
+    "default": "./dist/sass.modern.js"
+  },
+  "types": "dist/sass.d.ts",
   "scripts": {
-    "test": "jest"
+    "build": "microbundle",
+    "dev": "microbundle watch"
   },
   "keywords": [
     "style",
