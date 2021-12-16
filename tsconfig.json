@@ -15,5 +15,8 @@
         "packages/*/src"
       ]
     }
-  }
+  },
+  "include": [
+    "packages/*/src",
+  ]
 }
