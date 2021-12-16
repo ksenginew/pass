@@ -26,7 +26,8 @@
   "author": "Kavindu Santhusa",
   "license": "MIT",
   "dependencies": {
-    "sass": "^1.45.0"
+    "sass": "^1.45.0",
+    "pass-lang": "workspace:^"
   },
   "devDependencies": {
     "@types/sass": "^1.43.1"
