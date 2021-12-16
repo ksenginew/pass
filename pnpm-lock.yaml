@@ -30,12 +30,11 @@ importers:
 
   packages/sass:
     specifiers:
-      '@types/sass': ^1.43.1
+      pass-lang: workspace:^
       sass: ^1.45.0
     dependencies:
+      pass-lang: link:../pass-lang
       sass: 1.45.0
-    devDependencies:
-      '@types/sass': 1.43.1
 
 packages:
 
@@ -1732,12 +1731,6 @@ packages:
       '@types/node': 17.0.0
     dev: true
 
-  /@types/sass/1.43.1:
-    resolution: {integrity: sha512-BPdoIt1lfJ6B7rw35ncdwBZrAssjcwzI5LByIrYs+tpXlj/CAkuVdRsgZDdP4lq5EjyWzwxZCqAoFyHKFwp32g==}
-    dependencies:
-      '@types/node': 17.0.0
-    dev: true
-
   /@types/stack-utils/2.0.1:
     resolution: {integrity: sha512-Hl219/BT5fLAaz6NDkSuhzasy49dwQS/DSdu4MdggFB8zcXv7vflBI3xp7FEmkmdDkBUI2bPUNeMttp2knYdxw==}
     dev: true
@@ -1876,7 +1869,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.19.1
-      caniuse-lite: 1.0.30001286
+      caniuse-lite: 1.0.30001287
       fraction.js: 4.1.2
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -2065,7 +2058,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001286
+      caniuse-lite: 1.0.30001287
       electron-to-chromium: 1.4.19
       escalade: 3.1.1
       node-releases: 2.0.1
@@ -2120,13 +2113,13 @@ packages:
     resolution: {integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==}
     dependencies:
       browserslist: 4.19.1
-      caniuse-lite: 1.0.30001286
+      caniuse-lite: 1.0.30001287
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
     dev: true
 
-  /caniuse-lite/1.0.30001286:
-    resolution: {integrity: sha512-zaEMRH6xg8ESMi2eQ3R4eZ5qw/hJiVsO/HlLwniIwErij0JDr9P+8V4dtx1l+kLq6j3yy8l8W4fst1lBnat5wQ==}
+  /caniuse-lite/1.0.30001287:
+    resolution: {integrity: sha512-4udbs9bc0hfNrcje++AxBuc6PfLNHwh3PO9kbwnfCQWyqtlzg3py0YgFu8jyRTTo85VAz4U+VLxSlID09vNtWA==}
     dev: true
 
   /chalk/1.1.3:
