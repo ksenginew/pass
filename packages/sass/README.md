@@ -17,7 +17,7 @@ SASS
 <td>
 
 ```js
-css`
+scss().css`
 nav {
   ul {
     margin: 0;
@@ -39,9 +39,7 @@ nav {
 <td>
 
 ```js
-let css = sass()
-
-css`
+sass().css`
 nav
   ul
     margin: 0
@@ -60,3 +58,59 @@ nav
 </tr>
 </tbody>
 </table>
+
+## API
+This is a wrapper around Sass JS api.
+### css(default)
+
+```js
+(strings: TemplateStringsArray, ...args: any[]) => string;
+```
+
+**Example**
+
+```js
+import css from '@pass/sass';
+
+css`
+Your SCSS here...
+`
+```
+
+### scss
+
+```js
+(options?: StringOptions<"sync"> | undefined) => (strings: TemplateStringsArray, ...args: any[]) => string;
+```
+
+**Example**
+
+```js
+import { scss } from '@pass/sass';
+
+scss().css`
+Your SCSS here...
+`
+```
+
+### sass
+
+```js
+(options?: StringOptions<"sync">) => (strings: TemplateStringsArray, ...args: any[]) => string;
+```
+
+**Example**
+
+```js
+import { sass } from '@pass/sass';
+
+sass.css`
+Your SASS here...
+`
+```
+You can pass options to `sass` and `scss` functions. Read [Here](https://sass-lang.com/documentation/js-api/interfaces/StringOptionsWithoutImporter) for more information about options.
+
+**Read [Sass docs](https://sass-lang.com/documentation/js-api) for complete documentation.**
+
+
+
