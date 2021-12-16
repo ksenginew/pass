@@ -10,17 +10,9 @@ export * from "sass";
 
 export let scss =
   (options?: StringOptions<"sync">) =>
-  (strings: TemplateStringsArray, ...args: any[]) => {
-    let result = compileString(pass(strings, ...args), options);
+  (strings: TemplateStringsArray, ...args: any[]) =>
     // @ts-ignore
-    let css = result.css
-    // @ts-ignore
-    css.sourceMap = result.sourceMap
-    // @ts-ignore
-    css.loadedUrls = result.loadedUrls
-    // @ts-ignore
-    return css as string
-  };
+    compileString(pass(strings, ...args), options).css;
 
 export let sass = (options: StringOptions<"sync"> = {}) =>
   scss({ syntax: "indented", ...options });
