@@ -80,7 +80,7 @@ describe("sass", () => {
     `);
   });
 
-  test("sass scss support", () => {
+  test("sass support", () => {
     let css = sass();
     expect(css`
 nav
