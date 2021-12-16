@@ -8,8 +8,8 @@ import { css as pass } from 'pass-lang'
 // @ts-ignore
 export * from 'sass'
 
-export let scss = (options?: StringOptions) => (strings: TemplateStringsArray, ...args: any[]) => compileString(pass(strings, ...args), options)
+export let scss = (options?: StringOptions<'sync'>) => (strings: TemplateStringsArray, ...args: any[]) => compileString(pass(strings, ...args), options)
 
-export let sass = (options: StringOptions = {}) => scss({ style: 'indented', ...options})
+export let sass = (options: StringOptions<'sync'> = {}) => scss({ style: 'indented', ...options})
 
 export default scss();
