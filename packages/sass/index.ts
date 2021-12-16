@@ -12,9 +12,13 @@ export let scss =
   (options?: StringOptions<"sync">) =>
   (strings: TemplateStringsArray, ...args: any[]) => {
     let result = compileString(pass(strings, ...args), options);
+    // @ts-ignore
     let css = result.css
+    // @ts-ignore
     css.sourceMap = result.sourceMap
+    // @ts-ignore
     css.loadedUrls = result.loadedUrls
+    // @ts-ignore
     return css
   };
 
