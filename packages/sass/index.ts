@@ -14,7 +14,8 @@ export let scss =
     let result = compileString(pass(strings, ...args), options);
     let css = result.css
     css.sourceMap = result.sourceMap
-    return 
+    css.loadedUrls = result.loadedUrls
+    return css
   };
 
 export let sass = (options: StringOptions<"sync"> = {}) =>
