@@ -11,7 +11,7 @@ export * from "sass";
 export let scss =
   (options?: StringOptions<"sync">) =>
   (strings: TemplateStringsArray, ...args: any[]) => {
-    let result = compileString(pass(strings, ...args));
+    let result = compileString(pass(strings, ...args), options);
     return Object.assign(result.css, result);
   };
 
