@@ -9,7 +9,7 @@ import { css as pass } from 'pass-lang'
 export * from 'sass'
 
 export let scss = (options?: StringOptions<'sync'>) => (strings: TemplateStringsArray, ...args: any[]) => {
-  let result = compileString(pass(strings, ...args)
+  let result = compileString(pass(strings, ...args))
   return Object.assign(result.css, result)
 }, options)
 
