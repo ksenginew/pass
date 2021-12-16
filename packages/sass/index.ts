@@ -1,6 +1,6 @@
 import { compileString } from 'sass'
 import type { StringOptions } from 'sass'
-import { css as pass } from '@pass-lang'
+import { css as pass } from 'pass-lang'
 
 export * from 'sass'
 
