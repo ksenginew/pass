@@ -19,7 +19,7 @@ export let scss =
     // @ts-ignore
     css.loadedUrls = result.loadedUrls
     // @ts-ignore
-    return css
+    return css as string
   };
 
 export let sass = (options: StringOptions<"sync"> = {}) =>
