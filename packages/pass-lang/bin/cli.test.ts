@@ -27,4 +27,12 @@ describe('cli', () => {
     expect(fs.readFileSync('__test__/typescript.css').toString()).toMatchInlineSnapshot()
     fs.unlinkSync('__test__/typescript.css')
   })
+
+  test('multiple files', () => {
+    expect(execSync('node ./packages/pass-lang/bin/cli.js __test__/*')).toMatchInlineSnapshot()
+    expect(fs.readFileSync('__test__/javascript.css').toString()).toMatchInlineSnapshot()
+    fs.unlinkSync('__test__/javascript.css')
+    expect(fs.readFileSync('__test__/typescript.css').toString()).toMatchInlineSnapshot()
+    fs.unlinkSync('__test__/typescript.css')
+  })
 })
