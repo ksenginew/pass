@@ -2,6 +2,7 @@
 import { compileString } from 'sass'
 // @ts-ignore
 import type { StringOptions } from 'sass'
+// @ts-ignore
 import { css as pass } from 'pass-lang'
 
 export * from 'sass'
