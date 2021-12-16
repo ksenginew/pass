@@ -6,10 +6,20 @@
   "scripts": {
     "test": "jest"
   },
-  "keywords": ["style", "scss", "sass", "preprocessor", "css", "pass-lang"],
+  "keywords": [
+    "style",
+    "scss",
+    "sass",
+    "preprocessor",
+    "css",
+    "pass-lang"
+  ],
   "author": "Kavindu Santhusa",
   "license": "MIT",
   "dependencies": {
     "sass": "^1.45.0"
+  },
+  "devDependencies": {
+    "@types/sass": "^1.43.1"
   }
 }
