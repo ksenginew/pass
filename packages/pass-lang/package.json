@@ -7,19 +7,21 @@
     "pass": "bin/cli.js"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "pnpm run build -r",
+    "dev": "pnpm run watch --parallel"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ksenginew/PASS.git"
+    "url": "git+https://github.com/ksenginew/pass-lang.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Kavindu Santhusa",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ksenginew/PASS/issues"
+    "url": "https://github.com/ksenginew/pass-lang/issues"
   },
-  "homepage": "https://github.com/ksenginew/PASS#readme",
+  "homepage": "https://github.com/ksenginew/pass-lang#readme",
   "devDependencies": {
     "@types/jest": "^27.0.3",
     "jest": "^27.4.5",
