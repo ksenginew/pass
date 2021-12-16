@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "./packages",
+    "baseUrl": ".",
     "target": "ESNEXT",
     "module": "ESNEXT",
     "strict": true,
@@ -9,10 +9,10 @@
     "forceConsistentCasingInFileNames": true,
     "paths": {
       "pass-lang": [
-        "pass-lang"
+        "packages/pass-lang/src"
       ],
       "@pass-lang/*": [
-        "*"
+        "packages/*/src"
       ]
     }
   }
