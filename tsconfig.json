@@ -7,6 +7,7 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "paths": {
+      "pass-lang": ["packages/pass-lang"],
       "@pass-lang/*": ["packages/*"]
     }
   }
