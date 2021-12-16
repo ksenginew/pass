@@ -30,6 +30,5 @@
     "pass-lang": "workspace:^"
   },
   "devDependencies": {
-    "@types/sass": "^1.43.1"
   }
 }
