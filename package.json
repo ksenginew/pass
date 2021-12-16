@@ -7,7 +7,7 @@
     "pass": "bin/cli.js"
   },
   "scripts": {
-    "test": "jest"
+    "test": "pnpm test -r"
   },
   "repository": {
     "type": "git",
