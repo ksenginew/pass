@@ -1,5 +1,5 @@
 {
-  "name": "@pass-lang/sass",
+  "name": "@pass/sass",
   "version": "0.0.1",
   "description": "Sass support for next generation CSS preprocessor.",
   "source": "index.ts",
