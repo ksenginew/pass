@@ -1,4 +1,6 @@
+// @ts-ignore
 import { compileString } from 'sass'
+// @ts-ignore
 import type { StringOptions } from 'sass'
 import { css as pass } from 'pass-lang'
 
