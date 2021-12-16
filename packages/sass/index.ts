@@ -12,7 +12,7 @@ export let scss =
   (options?: StringOptions<"sync">) =>
   (strings: TemplateStringsArray, ...args: any[]) =>
     // @ts-ignore
-    compileString(pass(strings, ...args), options).css;
+    compileString(pass(strings, ...args), options).css as string;
 
 export let sass = (options: StringOptions<"sync"> = {}) =>
   scss({ syntax: "indented", ...options });
