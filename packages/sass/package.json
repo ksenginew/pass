@@ -1,13 +1,13 @@
 {
   "name": "@pass-lang/sass",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "Sass support for next generation CSS preprocessor.",
   "main": "index.js",
   "scripts": {
     "test": "jest"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["style", "scss", "sass", "preprocessor", "css", "pass-lang"],
+  "author": "Kavindu Santhusa",
   "license": "MIT",
   "dependencies": {
     "sass": "^1.45.0"
