@@ -1,5 +1,5 @@
 {
-  "name": "pass-lang-monorepo",
+  "name": "pass-monorepo",
   "private": true,
   "version": "0.0.1",
   "scripts": {
