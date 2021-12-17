@@ -23,7 +23,7 @@ importers:
   packages/core:
     specifiers: {}
 
-  packages/pass-compile:
+  packages/passcompile:
     specifiers:
       '@passlang/core': workspace:^
       globby: ^12.0.2
