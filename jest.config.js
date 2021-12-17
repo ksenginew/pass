@@ -4,7 +4,7 @@ module.exports = ({
   testEnvironment: 'node',
   moduleNameMapper: {
     '^@pass/(.*?)$': '<rootDir>/packages/$1/src',
-    'pass-lang': '<rootDir>/packages/pass-lang/src'
+    'pass-compile': '<rootDir>/packages/pass-compile/src'
   },
   rootDir: __dirname,
 });
