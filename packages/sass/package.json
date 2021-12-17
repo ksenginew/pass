@@ -20,14 +20,13 @@
     "scss",
     "sass",
     "preprocessor",
-    "css",
-    "pass-lang"
+    "css"
   ],
   "author": "Kavindu Santhusa",
   "license": "MIT",
   "dependencies": {
     "sass": "^1.45.0",
-    "pass-compile": "workspace:^"
+    "@pass/core": "workspace:^"
   },
   "devDependencies": {}
 }

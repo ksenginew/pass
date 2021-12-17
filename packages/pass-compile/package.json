@@ -20,7 +20,13 @@
     "type": "git",
     "url": "git+https://github.com/ksenginew/pass.git"
   },
-  "keywords": [],
+  "keywords": [
+    "style",
+    "pass",
+    "compiler",
+    "preprocessor",
+    "css"
+  ],
   "author": "Kavindu Santhusa",
   "license": "MIT",
   "bugs": {

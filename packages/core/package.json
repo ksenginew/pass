@@ -1,12 +1,36 @@
 {
   "name": "@pass/core",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "version": "0.0.1",
+  "description": "Heart of the Pass CSS preprocessor.",
+  "source": "src/index.ts",
+  "main": "dist/core.js",
+  "umd:main": "dist/core.umd.js",
+  "module": "dist/core.esm.js",
+  "exports": {
+    "require": "./dist/core.js",
+    "default": "./dist/core.modern.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "types": "dist/core.d.ts",
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksenginew/pass.git"
+  },
+  "keywords": [
+    "style",
+    "core",
+    "pass",
+    "preprocessor",
+    "css"
+  ],
+  "author": "Kavindu Santhusa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ksenginew/pass/issues"
+  },
+  "homepage": "https://github.com/ksenginew/pass#readme",
+  "dependencies": {}
 }
