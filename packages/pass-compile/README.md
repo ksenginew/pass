@@ -4,7 +4,7 @@
 
 1. Write your CSS(eg:- `example.pass.ts`)
     ```js
-    import { css } from 'pass-lang'
+    import { css } from '@pass/core'
     export default css`
     nav {
       width: ${10 + 10}px; /* operators */
