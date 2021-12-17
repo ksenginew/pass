@@ -8,10 +8,10 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "paths": {
-      "pass-lang": [
-        "packages/pass-lang/src"
+      "pass-compile": [
+        "packages/pass-compile/src"
       ],
-      "@pass-lang/*": [
+      "@pass/*": [
         "packages/*/src"
       ]
     }
