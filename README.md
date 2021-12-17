@@ -51,7 +51,7 @@ If you're interested in contributing to Pass, please read our [contributing docs
 ## Sponsors
 
 <a href="https://opencollective.com/pass" target="_blank">
-    <img src="https://opencollective.com/pass/sponsers.svg">
+    <img src="https://opencollective.com/pass/sponsors.svg">
 </a>
 
 ## Backers
