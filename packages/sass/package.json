@@ -1,6 +1,6 @@
 {
-  "name": "@pass/sass",
-  "version": "0.0.1-dev1",
+  "name": "@passlang/sass",
+  "version": "0.0.1",
   "description": "Sass support for next generation CSS preprocessor.",
   "source": "src/index.ts",
   "main": "dist/sass.js",
@@ -26,7 +26,7 @@
   "license": "MIT",
   "dependencies": {
     "sass": "^1.45.0",
-    "@pass/core": "workspace:^"
+    "@passlang/core": "workspace:^"
   },
   "devDependencies": {}
 }

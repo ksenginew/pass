@@ -3,7 +3,7 @@ import * as fs from "fs";
 
 describe("cli", () => {
   test("without arguments", () => {
-    expect(execSync("node ./packages/pass-compile/bin/cli.js").toString())
+    expect(execSync("node ./packages/passlang/bin/cli.js").toString())
       .toMatchInlineSnapshot(`
       "Processing 0 files(, ...)
       "
@@ -11,30 +11,30 @@ describe("cli", () => {
   });
 
   test("get help", () => {
-    expect(execSync("node ./packages/pass-compile/bin/cli.js -h").toString())
+    expect(execSync("node ./packages/passlang/bin/cli.js -h").toString())
       .toMatchInlineSnapshot(`
       "Generate css from source files that containing default exports.
       Usage:
-        pass-compile filename [-o=<outfile>] [-d]
-        pass-compile glob [-o=<outdir>] [-d]
+        passlang filename [-o=<outfile>] [-d]
+        passlang glob [-o=<outdir>] [-d]
       Options:
         -h, --help            Print this help message and exit.
-        -v, --version         Print pass-compile current version and exit.
+        -v, --version         Print passlang current version and exit.
         -d, --dev             Enable hot reload and watch mode.
         -o, --output PATH     Set output css file path.
         -i, --init PATH           Start a new project on the path.
 
       "
     `);
-    expect(execSync("node ./packages/pass-compile/bin/cli.js --help").toString())
+    expect(execSync("node ./packages/passlang/bin/cli.js --help").toString())
       .toMatchInlineSnapshot(`
       "Generate css from source files that containing default exports.
       Usage:
-        pass-compile filename [-o=<outfile>] [-d]
-        pass-compile glob [-o=<outdir>] [-d]
+        passlang filename [-o=<outfile>] [-d]
+        passlang glob [-o=<outdir>] [-d]
       Options:
         -h, --help            Print this help message and exit.
-        -v, --version         Print pass-compile current version and exit.
+        -v, --version         Print passlang current version and exit.
         -d, --dev             Enable hot reload and watch mode.
         -o, --output PATH     Set output css file path.
         -i, --init PATH           Start a new project on the path.
@@ -46,7 +46,7 @@ describe("cli", () => {
   test("javascript file", () => {
     expect(
       execSync(
-        "node ./packages/pass-compile/bin/cli.js __test__/javascript.js"
+        "node ./packages/passlang/bin/cli.js __test__/javascript.js"
       ).toString()
     ).toMatchInlineSnapshot(`
       "Processing 1 files(__test__/javascript.js, ...)
@@ -62,7 +62,7 @@ describe("cli", () => {
   test("typescript file", () => {
     expect(
       execSync(
-        "node ./packages/pass-compile/bin/cli.js __test__/typescript.ts"
+        "node ./packages/passlang/bin/cli.js __test__/typescript.ts"
       ).toString()
     ).toMatchInlineSnapshot(`
       "Processing 1 files(__test__/typescript.ts, ...)
@@ -77,7 +77,7 @@ describe("cli", () => {
 
   test("multiple files", () => {
     expect(
-      execSync("node ./packages/pass-compile/bin/cli.js __test__/*").toString()
+      execSync("node ./packages/passlang/bin/cli.js __test__/*").toString()
     ).toMatchInlineSnapshot(`
       "Processing 2 files(__test__/javascript.js, ...)
       Successfully built \\"__test__/javascript.js\\"

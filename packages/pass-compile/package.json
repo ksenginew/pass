@@ -1,17 +1,17 @@
 {
-  "name": "pass-compile",
-  "version": "0.0.1-dev1",
+  "name": "passlang",
+  "version": "0.0.1",
   "description": "Next generation CSS preprocessor. It's programmatically awesome.",
   "bin": "bin/cli.js",
   "source": "src/index.ts",
-  "main": "dist/pass-compile.js",
-  "umd:main": "dist/pass-compile.umd.js",
-  "module": "dist/pass-compile.esm.js",
+  "main": "dist/passlang.js",
+  "umd:main": "dist/passlang.umd.js",
+  "module": "dist/passlang.esm.js",
   "exports": {
-    "require": "./dist/pass-compile.js",
-    "default": "./dist/pass-compile.modern.js"
+    "require": "./dist/passlang.js",
+    "default": "./dist/passlang.modern.js"
   },
-  "types": "dist/pass-compile.d.ts",
+  "types": "dist/passlang.d.ts",
   "scripts": {
     "build": "microbundle",
     "dev": "microbundle watch"
@@ -23,6 +23,7 @@
   "keywords": [
     "style",
     "pass",
+    "passlang",
     "compiler",
     "preprocessor",
     "css"

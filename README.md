@@ -3,8 +3,8 @@
 </h1>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/pass-lang"><img src="https://img.shields.io/npm/v/pass-lang.svg?color=0EA5E9" alt="Npm Version"></a>
-  <a href="https://www.npmjs.com/package/pass-lang"><img src="https://img.shields.io/npm/dt/pass-lang.svg?color=1388bd" alt="Total Downloads"></a>
+  <a href="https://www.npmjs.com/package/passlang"><img src="https://img.shields.io/npm/v/passlang.svg?color=0EA5E9" alt="Npm Version"></a>
+  <a href="https://www.npmjs.com/package/passlang"><img src="https://img.shields.io/npm/dt/passlang.svg?color=1388bd" alt="Total Downloads"></a>
   <a href="https://github.com/ksenginew/pass/actions"><img src="https://img.shields.io/github/workflow/status/ksenginew/pass/CI" alt="Build Status"></a>
   <a href="https://codecov.io/gh/ksenginew/pass"><img src="https://img.shields.io/codecov/c/github/ksenginew/pass/dev.svg?sanitize=true" alt="Coverage"></a>
 </p>

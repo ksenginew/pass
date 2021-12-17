@@ -1,4 +1,4 @@
-# @pass/sass
+# @passlang/sass
 Sass support for next generation CSS preprocessor.",
 
 <table>
@@ -65,11 +65,11 @@ nav
 
     Make sure that you installed [_Node.JS_](https://nodejs.org) and [_NPM_](https://npmjs.com)(or another package manager for Node.JS).
     ```js
-    npm install @pass/saas
+    npm install @passlang/saas
     ```
 2. Import
     ```js
-    import css, { sass, scss } from '@pass/sass'
+    import css, { sass, scss } from '@passlang/sass'
     ```
 3. Use
     ```js
@@ -90,7 +90,7 @@ nav
     `
     ```
 
-> Contact me via [discussions](https://github.com/ksenginew/pass-lang/discussions) for help.
+> Contact me via [discussions](https://github.com/ksenginew/pass/discussions) for help.
 
 ## API
 
@@ -105,7 +105,7 @@ This is a wrapper around Sass JS api.
 **Example**
 
 ```js
-import css from '@pass/sass';
+import css from '@passlang/sass';
 
 css`
 Your SCSS here...
@@ -121,7 +121,7 @@ Your SCSS here...
 **Example**
 
 ```js
-import { scss } from '@pass/sass';
+import { scss } from '@passlang/sass';
 
 scss().css`
 Your SCSS here...
@@ -137,7 +137,7 @@ Your SCSS here...
 **Example**
 
 ```js
-import { sass } from '@pass/sass';
+import { sass } from '@passlang/sass';
 
 sass().css`
 Your SASS here...

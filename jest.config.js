@@ -3,8 +3,8 @@ module.exports = ({
   preset: 'ts-jest',
   testEnvironment: 'node',
   moduleNameMapper: {
-    '^@pass/(.*?)$': '<rootDir>/packages/$1/src',
-    'pass-compile': '<rootDir>/packages/pass-compile/src'
+    '^@passlang/(.*?)$': '<rootDir>/packages/$1/src',
+    'passlang': '<rootDir>/packages/passlang/src'
   },
   rootDir: __dirname,
 });

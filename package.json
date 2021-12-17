@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ksenginew/pass-lang.git"
+    "url": "git+https://github.com/ksenginew/pass.git"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ksenginew/pass-lang/issues"
+    "url": "https://github.com/ksenginew/pass/issues"
   },
-  "homepage": "https://github.com/ksenginew/pass-lang#readme",
+  "homepage": "https://github.com/ksenginew/pass#readme",
   "devDependencies": {
     "@changesets/cli": "^2.18.1",
     "@types/jest": "^27.0.3",

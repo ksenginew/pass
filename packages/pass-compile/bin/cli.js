@@ -10,11 +10,11 @@ let argv = minimist(process.argv.slice(2));
 
 const doc = `Generate css from source files that containing default exports.
 Usage:
-  pass-compile filename [-o=<outfile>] [-d]
-  pass-compile glob [-o=<outdir>] [-d]
+  passlang filename [-o=<outfile>] [-d]
+  passlang glob [-o=<outdir>] [-d]
 Options:
   -h, --help            Print this help message and exit.
-  -v, --version         Print pass-compile current version and exit.
+  -v, --version         Print passlang current version and exit.
   -d, --dev             Enable hot reload and watch mode.
   -o, --output PATH     Set output css file path.
   -i, --init PATH           Start a new project on the path.
