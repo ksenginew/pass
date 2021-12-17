@@ -27,7 +27,7 @@
   "license": "MIT",
   "dependencies": {
     "sass": "^1.45.0",
-    "pass-lang": "workspace:^"
+    "pass-compile": "workspace:^"
   },
   "devDependencies": {}
 }
