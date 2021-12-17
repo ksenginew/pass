@@ -1,6 +1,6 @@
 {
   "name": "@pass/sass",
-  "version": "0.0.1",
+  "version": "0.0.1-dev1",
   "description": "Sass support for next generation CSS preprocessor.",
   "source": "src/index.ts",
   "main": "dist/sass.js",
