@@ -10,8 +10,8 @@ let argv = minimist(process.argv.slice(2));
 
 const doc = `Generate css from source files that containing default exports.
 Usage:
-  pass-lang filename [-o=<outfile>] [-d]
-  pass-lang glob [-o=<outdir>] [-d]
+  pass-compile filename [-o=<outfile>] [-d]
+  pass-compile glob [-o=<outdir>] [-d]
 Options:
   -h, --help            Print this help message and exit.
   -v, --version         Print pass-lang current version and exit.
