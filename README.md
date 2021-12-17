@@ -1,7 +1,11 @@
 <h1 align="center">
-<a href="#nolink">
-  <img src="https://github.com/ksenginew/pass-lang/logo.svg" alt="Pass language logo" height="120" width="120"/><br>
-</a>
+  <pre>
+     _____
+    /    /
+   /____/
+  /
+  </pre>
+  <br>
   Pass
 </h1>
 
