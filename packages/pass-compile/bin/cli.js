@@ -14,7 +14,7 @@ Usage:
   pass-compile glob [-o=<outdir>] [-d]
 Options:
   -h, --help            Print this help message and exit.
-  -v, --version         Print pass-lang current version and exit.
+  -v, --version         Print pass-compile current version and exit.
   -d, --dev             Enable hot reload and watch mode.
   -o, --output PATH     Set output css file path.
   -i, --init PATH           Start a new project on the path.
