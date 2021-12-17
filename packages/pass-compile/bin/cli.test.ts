@@ -10,20 +10,6 @@ describe("cli", () => {
     `);
   });
 
-  test("get version", () => {
-    expect(execSync("node ./packages/pass-compile/bin/cli.js -v").toString())
-      .toMatchInlineSnapshot(`
-      "0.0.1
-      "
-    `);
-    expect(
-      execSync("node ./packages/pass-compile/bin/cli.js --version").toString()
-    ).toMatchInlineSnapshot(`
-      "0.0.1
-      "
-    `);
-  });
-
   test("get help", () => {
     expect(execSync("node ./packages/pass-compile/bin/cli.js -h").toString())
       .toMatchInlineSnapshot(`
