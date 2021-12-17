@@ -10,30 +10,22 @@
   <a href="https://www.npmjs.com/package/pass-lang"><img src="https://img.shields.io/npm/dt/pass-lang.svg?color=1388bd" alt="Total Downloads"></a>
   <a href="https://github.com/ksenginew/pass-lang/actions"><img src="https://img.shields.io/github/workflow/status/ksenginew/pass-lang/CI" alt="Build Status"></a>
   <a href="https://codecov.io/gh/ksenginew/pass-lang"><img src="https://img.shields.io/codecov/c/github/ksenginew/pass-lang/dev.svg?sanitize=true" alt="Coverage"></a>
-  <br>
-  <a href="https://discord.gg/aRYWm8r8Eq"><img src="https://img.shields.io/badge/chat-discord-blue?style=flat&logo=discord&logoColor=white&label=&color=7289da" alt="Discord Chat"></a>
-  <br>
 </p>
 
-<p align="center">Next generation utility-first CSS framework.</p>
-
-<p align="center">
-If you are already familiar with Tailwind CSS, think about Windi CSS as an <b>on-demanded</b> alternative to Tailwind, which provides faster load times, <b>fully compatible with Tailwind v2.0</b> and with a bunch of additional cool features.
-</p>
+<p align="center">Next generation CSS preprocessor. It's programmatically awesome.</p>
 
 [windi css]: https://windicss.org
 [website]: https://windicss.org
 [video comparison]: https://twitter.com/antfu7/status/1361398324587163648
 
-## Why Windi CSS? 🤔
+## Why Pass? 🤔
 
-A quote from the author should illustrate his motivation to create [Windi CSS]:
+**Many CSS preprocessors comes with a learning curve of a new language.
+But Pass is still CSS. With powerful extensions if you want.**
 
-> When my project became larger and there were about dozens of components, the initial compilation time reached 3s, and hot updates took more than 1s with Tailwind CSS. - [@voorjaar](https://github.com/voorjaar)
-
-By scanning your HTML and CSS and generating utilities on demand, [Windi CSS] is able to provide [faster load times][video comparison] and a speedy HMR in development, and does not require purging in production.
-
-Read more about it in the [Introduction](https://windicss.org/guide/).
+> ```diff
+> - currently in development
+> ```
 
 ## Integrations
 
@@ -41,18 +33,10 @@ Windi CSS provides first-class integrations for your favorite tools, select your
 
 | Frameworks | Package | Version |
 | :-- | :-- | :-- |
-| CLI | [Built-in](https://windicss.org/guide/cli) | ![](https://img.shields.io/npm/v/windicss?label=&color=0EA5E9) |
-| VSCode Extension | [windicss-intellisense](https://github.com/windicss/windicss-intellisense) | ![](https://img.shields.io/visual-studio-marketplace/v/voorjaar.windicss-intellisense.svg?label=&color=1388bd) |
-| Vite | [vite-plugin-windicss](https://github.com/windicss/vite-plugin-windicss) | ![](https://img.shields.io/npm/v/vite-plugin-windicss?label=&color=0EA5E9) |
-| Rollup | [rollup-plugin-windicss](https://github.com/windicss/vite-plugin-windicss/tree/main/packages/rollup-plugin-windicss) | ![](https://img.shields.io/npm/v/rollup-plugin-windicss?label=&color=1388bd) |
-| Webpack | [windicss-webpack-plugin](https://github.com/windicss/windicss-webpack-plugin) | ![](https://img.shields.io/npm/v/windicss-webpack-plugin?label=&color=1388bd) |
-| Nuxt | [nuxt-windicss](https://github.com/windicss/nuxt-windicss-module) | ![](https://img.shields.io/npm/v/nuxt-windicss-module?label=&color=1388bd) |
-| Svelte | [svelte-windicss-preprocess](https://github.com/windicss/svelte-windicss-preprocess) | ![](https://img.shields.io/npm/v/svelte-windicss-preprocess?label=&color=1388bd) |
-| StencilJS | [stencil-windicss](https://github.com/codeperate/stencil-windicss)<sup>Community</sup> | ![](https://img.shields.io/npm/v/@codeperate/stencil-windicss?label=&color=1388bd) |
+| CLI | Built-in | ![](https://img.shields.io/npm/v/pass-lang?label=&color=0EA5E9) |
 
 ## Plugins 🛠
-
-Check out [plugins available for windicss](https://github.com/windicss/plugins).
+- [Sass and SCSS support](https://github.com/ksenginew/pass-lang/tree/main/packages/sass#readme)
 
 ## Documentation 📖
 
@@ -68,13 +52,13 @@ If you're interested in contributing to windicss, please read our [contributing 
 
 ## Sponsors
 
-<a href="https://opencollective.com/windicss" target="_blank">
-    <img src="https://opencollective.com/windicss/sponsors.svg">
+<a href="https://opencollective.com/pass" target="_blank">
+    <img src="https://opencollective.com/pass/sponsers.svg">
 </a>
 
 ## Backers
-<a href="https://opencollective.com/windicss" target="_blank">
-    <img src="https://opencollective.com/windicss/backers.svg">
+<a href="https://opencollective.com/pass" target="_blank">
+    <img src="https://opencollective.com/pass/backers.svg">
 </a>
 
 ## License
@@ -85,11 +69,7 @@ Distributed under the [MIT License](https://github.com/windicss/windicss/blob/ma
 
 
 # pass lang
-Next generation CSS preprocessor. It's programmatically awesome.
 
-> ```diff
-> - currently in development
-> ```
 
 
 ## Usage
@@ -126,4 +106,3 @@ Next generation CSS preprocessor. It's programmatically awesome.
 
 
 ### Extensions
-- [Sass and SCSS support](https://github.com/ksenginew/pass-lang/tree/main/packages/sass#readme)
