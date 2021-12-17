@@ -1,6 +1,6 @@
 {
   "name": "pass-compile",
-  "version": "0.0.1",
+  "version": "0.0.1-dev1",
   "description": "Next generation CSS preprocessor. It's programmatically awesome.",
   "bin": "bin/cli.js",
   "source": "src/index.ts",
