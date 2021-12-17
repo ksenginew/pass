@@ -1,4 +1,4 @@
-# pass-lang
+# pass-compile
 
 ## Usage
 
@@ -25,7 +25,7 @@
     ```
 2. Convert it to css
     ```bash
-    npx pass-lang example.pass.ts
+    npx pass-compile example.pass.ts
     ```
     **Take a look at the newly created `example.pass.css` file.**
 
