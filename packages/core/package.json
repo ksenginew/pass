@@ -1,6 +1,6 @@
 {
   "name": "@pass/core",
-  "version": "0.0.1-dev1",
+  "version": "0.0.2",
   "description": "Heart of the Pass CSS preprocessor.",
   "source": "src/index.ts",
   "main": "dist/core.js",
