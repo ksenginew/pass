@@ -1,11 +1,4 @@
 <h1 align="center">
-  <pre>
-     _____
-    /    /
-   /____/
-  /
-  </pre>
-  <br>
   Pass
 </h1>
 
@@ -27,7 +20,7 @@ But Pass is still CSS. With powerful extensions if you want.**
 > - currently in development
 > ```
 
-## Integrations
+## Integrations 🔀
 
 <!-- Pass CSS provides first-class integrations for your favorite tools, select yours and get started. -->
 
@@ -44,25 +37,25 @@ But Pass is still CSS. With powerful extensions if you want.**
 
 Check [the documentation website][website].
 
-## Discussions
+## Discussions 💬
 
 We’re using [GitHub Discussions](https://github.com/ksenginew/pass/discussions) as a place to connect with other members of our community. You are free to ask questions and share ideas, so enjoy yourself.
 
-## Contributing
+## Contributing 🤝
 
 If you're interested in contributing to Pass, please read our [contributing docs](https://github.com/ksenginew/pass/blob/main/CONTRIBUTING.md) **before submitting a pull request**.
 
-## Sponsors
+## Sponsors 💸
 
 <a href="https://opencollective.com/pass" target="_blank">
     <img src="https://opencollective.com/pass/sponsors.svg">
 </a>
 
-## Backers
+## Backers 🍩
 <a href="https://opencollective.com/pass" target="_blank">
     <img src="https://opencollective.com/pass/backers.svg">
 </a>
 
-## License
+## License ⚖️
 
 Distributed under the [MIT License](https://github.com/ksenginew/pass/blob/main/LICENSE).
