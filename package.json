@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/ksenginew/pass-lang#readme",
   "devDependencies": {
+    "@changesets/cli": "^2.18.1",
     "@types/jest": "^27.0.3",
     "jest": "^27.4.5",
     "microbundle": "^0.14.2",
