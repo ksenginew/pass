@@ -3,7 +3,7 @@ import { compileString } from "sass";
 // @ts-ignore
 import type { StringOptions } from "sass";
 // @ts-ignore
-import { css as pass } from "pass-lang";
+import { css as pass } from "pass-compile";
 
 // @ts-ignore
 export * from "sass";
