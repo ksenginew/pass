@@ -1,5 +1,15 @@
+import { stringify } from './stringify';
+
+export { stringify } from './stringify'
+
 export let css = (strings: TemplateStringsArray, ...args: any[]) =>
     strings.reduce(
-        (acc, currentString, index) => acc + currentString + (args[index] ?? ""),
+        (p, c, index) => {
+            let value = args[index]
+            if (value == undefined) value = ''
+            else if (typeof value == 'object')
+                value = stringify(value)
+            return p + c + value
+        },
         ""
     );
