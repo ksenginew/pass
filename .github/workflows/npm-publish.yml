@@ -36,6 +36,6 @@ jobs:
           cache: pnpm
       - run: pnpm install
       - run: pnpm build
-      - run: pnpm -r publish
+      - run: pnpm -r publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
