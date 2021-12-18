@@ -3,8 +3,11 @@
 ## Usage
 
 1. Write your CSS(eg:- `example.pass.ts`)
-    ```js
+    ```ts
     import { css } from '@passlang/core'
+    
+    let font_stack: string = 'monospace'
+
     export default css`
     nav {
       width: ${10 + 10}px; /* operators */
@@ -12,14 +15,6 @@
 
     ul {
       font: 100% ${font_stack}; /* using variables */
-    }
-
-    li {
-      ${theme()} /* using functions / mixins */
-    }
-
-    a {
-      ${equal_heights}/* extending styles */
     }
     `
     ```
