@@ -6,8 +6,8 @@ export let stringify = (obj: any) => {
         else {
             val = Array.isArray(val) ? val : [val];
             out += val
-                .filter((v) => v != undefined)
-                .map((v) => key + (key[0] == "@" ? " " : ":") + v + ";")
+                .filter((v: any) => v != undefined)
+                .map((v: any) => key + (key[0] == "@" ? " " : ":") + v + ";")
                 .join("");
         }
     }
