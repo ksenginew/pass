@@ -6,8 +6,7 @@ export let css = (strings: TemplateStringsArray, ...args: any[]) =>
     strings.reduce(
         (p, c, index) => {
             let value = args[index]
-            if (value == undefined) value = ''
-            else if (typeof value == 'object')
+            if (typeof value == 'object')
                 value = stringify(value)
             return p + c + value
         },
