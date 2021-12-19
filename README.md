@@ -42,7 +42,8 @@ Check [the documentation website](https://passlang.vercel.app).
 
 ## Discussions 💬
 
-We’re using [GitHub Discussions](https://github.com/ksenginew/pass/discussions) as a place to connect with other members of our community. You are free to ask questions and share ideas, so enjoy yourself.
+[![GitHub Discussions](https://img.shields.io/badge/Discussions-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ksenginew/pass/discussions)
+[![e-mail](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ksengine.github@gmail.com)
 
 ## Contributing 🤝
 
