@@ -1,6 +1,6 @@
 <h1 align="center">
   <a href="#nolink">
-    <img src="https://github.com/ksenginew/pass/raw/main/pass.png" alt="Pass logo" height="120" width="120"/><br>
+    <img src="https://passlang.vercel.app/img/logo.png" alt="Pass logo" height="120" width="120"/><br>
   </a>
   Pass
 </h1>
