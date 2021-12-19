@@ -24,7 +24,7 @@ But Pass is still CSS. With powerful extensions if you want.**
 > - currently in development
 > ```
 
-## Quickstart :play:
+## Quickstart 🏃
 
 Choose your favourite tool and start using Pass. _CLI_ is recommended.
 
