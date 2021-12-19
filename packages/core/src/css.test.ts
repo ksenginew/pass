@@ -10,7 +10,11 @@ describe("css", () => {
       css`
         color: red;
       `
-    ).toMatchInlineSnapshot(`"color: red;"`);
+    ).toMatchInlineSnapshot(`
+      "
+              color: red;
+            "
+    `);
   });
 
   test("with string as argument", () => {
@@ -18,7 +22,11 @@ describe("css", () => {
       css`
         color: ${"red"};
       `
-    ).toMatchInlineSnapshot(`"color: red;"`);
+    ).toMatchInlineSnapshot(`
+      "
+              color: red;
+            "
+    `);
   });
 
   test("with number", () => {
@@ -26,7 +34,11 @@ describe("css", () => {
       css`
         order: ${1};
       `
-    ).toMatchInlineSnapshot(`"order: 1;"`);
+    ).toMatchInlineSnapshot(`
+      "
+              order: 1;
+            "
+    `);
   });
 
   test("with bigint", () => {
@@ -34,7 +46,11 @@ describe("css", () => {
       css`
         order: ${1n};
       `
-    ).toMatchInlineSnapshot(`"order: 1;"`);
+    ).toMatchInlineSnapshot(`
+      "
+              order: 1;
+            "
+    `);
   });
 
   test("with boolean", () => {
@@ -42,12 +58,20 @@ describe("css", () => {
       css`
         order: ${true};
       `
-    ).toMatchInlineSnapshot(`"order: true;"`);
+    ).toMatchInlineSnapshot(`
+      "
+              order: true;
+            "
+    `);
     expect(
       css`
         order: ${false};
       `
-    ).toMatchInlineSnapshot(`"order: false;"`);
+    ).toMatchInlineSnapshot(`
+      "
+              order: false;
+            "
+    `);
   });
 
   test("with undefined", () => {
@@ -55,7 +79,11 @@ describe("css", () => {
       css`
         order: ${undefined};
       `
-    ).toMatchInlineSnapshot(`"order: ;"`);
+    ).toMatchInlineSnapshot(`
+      "
+              order: ;
+            "
+    `);
   });
 
   test("with null", () => {
@@ -63,6 +91,10 @@ describe("css", () => {
       css`
         order: ${null};
       `
-    ).toMatchInlineSnapshot(`"order: ;"`);
+    ).toMatchInlineSnapshot(`
+      "
+              order: ;
+            "
+    `);
   });
 });
