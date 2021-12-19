@@ -8,7 +8,7 @@ export let css = (strings: TemplateStringsArray, ...args: any[]) =>
             let value = args[index]
             if (typeof value == 'object')
                 value = stringify(value)
-            return p + c + value
+            return p + c + (value ?? '')
         },
         ""
     );
