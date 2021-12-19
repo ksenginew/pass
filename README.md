@@ -23,13 +23,13 @@ But Pass is still CSS. With powerful extensions if you want.**
 > - currently in development
 > ```
 
-## Integrations 🔀
+## Quickstart :play:
 
-<!-- Pass CSS provides first-class integrations for your favorite tools, select yours and get started. -->
+Choose your favourite tool and start using Pass. _CLI_ is recommended.
 
-| Frameworks | Package | Version |
+| Frameworks | Package | Version/NPM |
 | :-- | :-- | :-- |
-| CLI | Built-in | ![CLI package version badge](https://img.shields.io/npm/v/passlang?label=&color=0EA5E9) |
+| CLI | [passlang](https://github.com/ksenginew/pass/tree/main/packages/passlang#readme) | [![CLI package version badge](https://img.shields.io/npm/v/passlang?label=&color=0EA5E9)](https://www.npmjs.com/package/passlang) |
 
 > Help us to create an integration for your favourite tool.
 
@@ -38,7 +38,7 @@ But Pass is still CSS. With powerful extensions if you want.**
 
 ## Documentation 📖
 
-Check [the documentation website][website].
+Check [the documentation website](https://passlang.vercel.app).
 
 ## Discussions 💬
 
