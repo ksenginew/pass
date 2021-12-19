@@ -63,3 +63,5 @@ If you're interested in contributing to Pass, please read our [contributing docs
 ## License ⚖️
 
 Distributed under the [MIT License](https://github.com/ksenginew/pass/blob/main/LICENSE).
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fksenginew%2Fpass.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fksenginew%2Fpass?ref=badge_large)
