@@ -5,8 +5,7 @@ describe("cli", () => {
   test("without arguments", () => {
     expect(execSync("node ./packages/passlang/bin/cli.js").toString())
       .toMatchInlineSnapshot(`
-      "Failed to install \\"@passlang/core\\". Please install it manually(eg:- \\"npm install @passlang/core\\").
-      Processing 0 files(, ...)
+      "Processing 0 files(, ...)
       "
     `);
   });
@@ -14,8 +13,7 @@ describe("cli", () => {
   test("get help", () => {
     expect(execSync("node ./packages/passlang/bin/cli.js -h").toString())
       .toMatchInlineSnapshot(`
-      "Failed to install \\"@passlang/core\\". Please install it manually(eg:- \\"npm install @passlang/core\\").
-      Generate css from source files that containing default exports.
+      "Generate css from source files that containing default exports.
       Usage:
         passlang filename [-o=<outfile>] [-d]
         passlang glob [-o=<outdir>] [-d]
@@ -30,8 +28,7 @@ describe("cli", () => {
     `);
     expect(execSync("node ./packages/passlang/bin/cli.js --help").toString())
       .toMatchInlineSnapshot(`
-      "Failed to install \\"@passlang/core\\". Please install it manually(eg:- \\"npm install @passlang/core\\").
-      Generate css from source files that containing default exports.
+      "Generate css from source files that containing default exports.
       Usage:
         passlang filename [-o=<outfile>] [-d]
         passlang glob [-o=<outdir>] [-d]
@@ -52,8 +49,7 @@ describe("cli", () => {
         "node ./packages/passlang/bin/cli.js __test__/javascript.js"
       ).toString()
     ).toMatchInlineSnapshot(`
-      "Failed to install \\"@passlang/core\\". Please install it manually(eg:- \\"npm install @passlang/core\\").
-      Processing 1 files(__test__/javascript.js, ...)
+      "Processing 1 files(__test__/javascript.js, ...)
       Successfully built \\"__test__/javascript.js\\"
       "
     `);
@@ -69,8 +65,7 @@ describe("cli", () => {
         "node ./packages/passlang/bin/cli.js __test__/typescript.ts"
       ).toString()
     ).toMatchInlineSnapshot(`
-      "Failed to install \\"@passlang/core\\". Please install it manually(eg:- \\"npm install @passlang/core\\").
-      Processing 1 files(__test__/typescript.ts, ...)
+      "Processing 1 files(__test__/typescript.ts, ...)
       Successfully built \\"__test__/typescript.ts\\"
       "
     `);
@@ -84,8 +79,7 @@ describe("cli", () => {
     expect(
       execSync("node ./packages/passlang/bin/cli.js __test__/*").toString()
     ).toMatchInlineSnapshot(`
-      "Failed to install \\"@passlang/core\\". Please install it manually(eg:- \\"npm install @passlang/core\\").
-      Processing 2 files(__test__/javascript.js, ...)
+      "Processing 2 files(__test__/javascript.js, ...)
       Successfully built \\"__test__/javascript.js\\"
       Successfully built \\"__test__/typescript.ts\\"
       "
