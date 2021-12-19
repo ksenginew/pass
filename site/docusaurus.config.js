@@ -44,7 +44,7 @@ const config = {
         title: 'Pass',
         logo: {
           alt: 'Pass logo',
-          src: 'img/logo.svg',
+          src: 'img/logo.png',
         },
         items: [
           {
