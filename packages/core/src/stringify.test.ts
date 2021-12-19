@@ -1,6 +1,6 @@
 import { stringify } from "./stringify";
 
-describe("stringify", (stringify) => {
+describe("stringify", () => {
   test("empty object", () => {
     expect(stringify({})).toMatchInlineSnapshot(`""`);
   });
