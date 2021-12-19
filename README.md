@@ -26,7 +26,7 @@ But Pass is still CSS. With powerful extensions if you want.**
 
 | Frameworks | Package | Version |
 | :-- | :-- | :-- |
-| CLI | Built-in | ![](https://img.shields.io/npm/v/pass-lang?label=&color=0EA5E9) |
+| CLI | Built-in | ![CLI package version badge](https://img.shields.io/npm/v/passlang?label=&color=0EA5E9) |
 
 > Help us to create an integration for your favourite tool.
 
