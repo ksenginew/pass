@@ -10,6 +10,7 @@
   <a href="https://www.npmjs.com/package/passlang"><img src="https://img.shields.io/npm/dt/passlang.svg?color=1388bd" alt="Total Downloads"></a>
   <a href="https://github.com/ksenginew/pass/actions"><img src="https://img.shields.io/github/workflow/status/ksenginew/pass/CI" alt="Build Status"></a>
   <a href="https://codecov.io/gh/ksenginew/pass"><img src="https://img.shields.io/codecov/c/github/ksenginew/pass/dev.svg?sanitize=true" alt="Coverage"></a>
+  <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fksenginew%2Fpass?ref=badge_small"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fksenginew%2Fpass.svg?type=small" alt="FOSSA Status"></a>
 </p>
 
 <p align="center">Next generation CSS preprocessor. It's programmatically awesome.</p>
@@ -63,5 +64,3 @@ If you're interested in contributing to Pass, please read our [contributing docs
 ## License ⚖️
 
 Distributed under the [MIT License](https://github.com/ksenginew/pass/blob/main/LICENSE).
-
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fksenginew%2Fpass.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fksenginew%2Fpass?ref=badge_large)
