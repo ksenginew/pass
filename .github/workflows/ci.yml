@@ -31,6 +31,6 @@ jobs:
         cache: 'pnpm'
     - run: pnpm install
     - run: pnpm build --if-present
-    - run: npm test
+    - run: pnpm test -- --coverage
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v2
