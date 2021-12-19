@@ -8,11 +8,15 @@ let { version } = require("../package.json");
 try {
   require("@passlang/core");
 } catch {
-  require("child_process").execFileSync("npm", [
-    "install",
-    "@passlang/core",
-    "--no-save",
-  ]);
+  try {
+    require("child_process").execFileSync("npm", [
+      "install",
+      "@passlang/core",
+      "--no-save",
+    ]);
+  } catch {
+    console.log('Failed to install "@passlang/core". Please install it manually(eg:- "npm install @passlang/core").')
+  }
 }
 let argv = minimist(process.argv.slice(2));
 
