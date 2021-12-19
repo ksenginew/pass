@@ -19,7 +19,8 @@
     `
     ```
 2. Convert it to css
-    ```bash
+    ```sh
+    npm install passlang
     npx passlang example.pass.ts
     ```
     **Take a look at the newly created `example.pass.css` file.**
