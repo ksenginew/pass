@@ -15,7 +15,7 @@ try {
       "--no-save",
     ]);
   } catch {
-    console.log('Failed to install "@passlang/core". Please install it manually(eg:- "npm install @passlang/core").')
+    console.error('Failed to install "@passlang/core". Please install it manually(eg:- "npm install @passlang/core").')
   }
 }
 let argv = minimist(process.argv.slice(2));
