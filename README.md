@@ -29,7 +29,8 @@ Choose your favourite tool and start using Pass. _CLI_ is recommended.
 
 | Frameworks | Package | Version/NPM |
 | :-- | :-- | :-- |
-| CLI | [passlang](https://github.com/ksenginew/pass/tree/main/packages/passlang#readme) | [![CLI package version badge](https://img.shields.io/npm/v/passlang?label=&color=0EA5E9)](https://www.npmjs.com/package/passlang) |
+| CLI | [passlang](https://github.com/ksenginew/pass/tree/main/packages/passlang#readme) | [![CLI package version badge](https://img.shields.io/npm/v/passlang?label=&color=0EA5E9)](https://www.npmjs.com/package/passlang) [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fksenginew%2Fpass.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fksenginew%2Fpass?ref=badge_shield)
+|
 
 > Help us to create an integration for your favourite tool.
 
@@ -63,3 +64,6 @@ If you're interested in contributing to Pass, please read our [contributing docs
 ## License ⚖️
 
 Distributed under the [MIT License](https://github.com/ksenginew/pass/blob/main/LICENSE).
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fksenginew%2Fpass.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fksenginew%2Fpass?ref=badge_large)
