@@ -42,7 +42,7 @@ ul {
             if (v.docChanged) {
               document.querySelector('.' + styles.preview).textContent = ''
               try {
-                import(URL.createObjectURL(new Blob([editor.state.doc.toString()], {type: 'text/javascript'}))).then(module => setCode(module.default))
+                window.import(URL.createObjectURL(new Blob([editor.state.doc.toString()], {type: 'text/javascript'}))).then(module => setCode(module.default))
               } catch(e) {
                 setCode(e.toString())
               }
