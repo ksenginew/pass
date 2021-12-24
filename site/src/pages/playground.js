@@ -1,20 +1,19 @@
 import React, { Fragment, useEffect, useState, createRef } from "react";
 import Layout from "@theme/Layout";
 import CodeBlock from "@theme/CodeBlock";
-import { EditorState, EditorView, basicSetup } from "@codemirror/basic-setup"
-import { javascript } from "@codemirror/lang-javascript"
+import { EditorState, EditorView, basicSetup } from "@codemirror/basic-setup";
+import { javascript } from "@codemirror/lang-javascript";
 import styles from "./playground.module.css";
-import BrowserOnly from '@docusaurus/BrowserOnly';
+import BrowserOnly from "@docusaurus/BrowserOnly";
 
 function CodeEditor() {
-  let parent = createRef()
-  let [mounted, setMounted] = useState(false)
-  let [code, setCode] = useState('')
+  let parent = createRef();
+  let [mounted, setMounted] = useState(false);
+  let [code, setCode] = useState("");
 
   useEffect(() => {
-    if (mounted)
-      return
-    setMounted(true)
+    if (mounted) return;
+    setMounted(true);
 
     let editor = new EditorView({
       state: EditorState.create({
@@ -36,30 +35,38 @@ ul {
           javascript(),
           EditorView.theme({
             "&": { height: "40vh" },
-            ".cm-scroller": { overflow: "auto" }
+            ".cm-scroller": { overflow: "auto" },
           }),
-          EditorView.updateListener.of(v => {
+          EditorView.updateListener.of((v) => {
             if (v.docChanged) {
-              document.querySelector('.' + styles.preview).textContent = ''
+              document.querySelector("." + styles.preview).textContent = "";
               try {
-                window.import(URL.createObjectURL(new Blob([editor.state.doc.toString()], {type: 'text/javascript'}))).then(module => setCode(module.default))
-              } catch(e) {
-                setCode(e.toString())
-                console.log(e)
+                new Function("url", "return import(url)")(
+                  URL.createObjectURL(
+                    new Blob([editor.state.doc.toString()], {
+                      type: "text/javascript",
+                    })
+                  )
+                ).then((module) => setCode(module.default));
+              } catch (e) {
+                setCode(e.toString());
+                console.log(e);
               }
             }
-          })
-        ]
+          }),
+        ],
       }),
-      parent: parent.current
-    })
-  }, [])
-  return <>
-    <div ref={parent}></div>
-    <div className={styles.preview} >
-      <CodeBlock className="language-css">{code}</CodeBlock>
-    </div>
-  </>
+      parent: parent.current,
+    });
+  }, []);
+  return (
+    <>
+      <div ref={parent}></div>
+      <div className={styles.preview}>
+        <CodeBlock className="language-css">{code}</CodeBlock>
+      </div>
+    </>
+  );
 }
 
 export default function Playground() {
@@ -69,7 +76,7 @@ export default function Playground() {
       <div className={styles.playground}>
         <BrowserOnly fallback={<div>Loading...</div>}>
           {() => {
-            return <CodeEditor />
+            return <CodeEditor />;
           }}
         </BrowserOnly>
       </div>
