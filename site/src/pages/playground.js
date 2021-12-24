@@ -6,7 +6,7 @@ import { javascript } from "@codemirror/lang-javascript";
 import styles from "./playground.module.css";
 import BrowserOnly from "@docusaurus/BrowserOnly";
 import Head from "@docusaurus/Head";
-import { transform } from "sucrase";
+import {transform} from 'https://cdn.skypack.dev/sucrase';
 
 function CodeEditor() {
   let parent = createRef();
