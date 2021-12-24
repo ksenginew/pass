@@ -16,9 +16,9 @@ The CSS  `@import`  directive has a major drawback due to performance issues; it
 So, the Pass introduced  `import`  syntax. It includes the file in the CSS; so no extra HTTP call is required at runtime!
 
 Pass Import Syntax:
-
+```js
 import  any_name from 'file_path'
-
+```
 **Tip:**  You do not need to specify a file extension, Pass automatically assumes that you mean a .js or .ts file. 
 
 You can import as many files as you need in the main file:
