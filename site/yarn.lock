@@ -1247,7 +1247,7 @@
     "@codemirror/state" "^0.19.0"
     "@codemirror/view" "^0.19.23"
 
-"@codemirror/highlight@^0.19.0":
+"@codemirror/highlight@^0.19.0", "@codemirror/highlight@^0.19.6":
   version "0.19.6"
   resolved "https://registry.yarnpkg.com/@codemirror/highlight/-/highlight-0.19.6.tgz#7f2e066f83f5649e8e0748a3abe0aaeaf64b8ac2"
   integrity sha512-+eibu6on9quY8uN3xJ/n3rH+YIDLlpX7YulVmFvqAIz/ukRQ5tWaBmB7fMixHmnmRIRBRZgB8rNtonuMwZSAHQ==
@@ -1267,14 +1267,18 @@
     "@codemirror/state" "^0.19.0"
     "@codemirror/view" "^0.19.0"
 
-"@codemirror/lang-python@^0.19.2":
-  version "0.19.2"
-  resolved "https://registry.yarnpkg.com/@codemirror/lang-python/-/lang-python-0.19.2.tgz#4c1bdb3bf4632481be7c3bc14cac3a162c9c4fbc"
-  integrity sha512-qeDymHL97+pNxFiDrtaMFvd/dActt7sZjebPnrc8T2V1CcBkc2YkcaxEOD5dssM/rQ9dG9LqON/Nbk2fIxcapA==
+"@codemirror/lang-javascript@^0.19.3":
+  version "0.19.3"
+  resolved "https://registry.yarnpkg.com/@codemirror/lang-javascript/-/lang-javascript-0.19.3.tgz#281b3447d8b65d98311ebf25893ef5c30a11418b"
+  integrity sha512-2NE5z98Nz9Rv4OS5UtgehCSnyQjac+P85+evzy1D/4wllp/EPaHIEEtSP1daBvrLy49SdI/9vES3ZJu6rSv4/w==
   dependencies:
-    "@codemirror/highlight" "^0.19.0"
+    "@codemirror/autocomplete" "^0.19.0"
+    "@codemirror/highlight" "^0.19.6"
     "@codemirror/language" "^0.19.0"
-    "@lezer/python" "^0.15.0"
+    "@codemirror/lint" "^0.19.0"
+    "@codemirror/state" "^0.19.0"
+    "@codemirror/view" "^0.19.0"
+    "@lezer/javascript" "^0.15.1"
 
 "@codemirror/language@^0.19.0":
   version "0.19.7"
@@ -1751,19 +1755,19 @@
   resolved "https://registry.yarnpkg.com/@lezer/common/-/common-0.15.11.tgz#965b5067036305f12e8a3efc344076850be1d3a8"
   integrity sha512-vv0nSdIaVCRcJ8rPuDdsrNVfBOYe/4Szr/LhF929XyDmBndLDuWiCCHooGlGlJfzELyO608AyDhVsuX/ZG36NA==
 
+"@lezer/javascript@^0.15.1":
+  version "0.15.2"
+  resolved "https://registry.yarnpkg.com/@lezer/javascript/-/javascript-0.15.2.tgz#50b70a02561b047947e050e0619b1aea7131dc5f"
+  integrity sha512-ytWvdJ1NAc0pfrNipGQs8otJVfjVibpIiFKH0fl99rKSA6cVlyQN/XTj/dEAQCfBfCBPAFdc30cuUe5CGZ0odA==
+  dependencies:
+    "@lezer/lr" "^0.15.0"
+
 "@lezer/lr@^0.15.0":
   version "0.15.5"
   resolved "https://registry.yarnpkg.com/@lezer/lr/-/lr-0.15.5.tgz#4bce44169c441d9dda7be398f5202ea65c5f1138"
   integrity sha512-DEcLyhdmBxD1foQe7RegLrSlfS/XaTMGLkO5evkzHWAQKh/JnFWp7j7iNB7s2EpxzRrBCh0U+W7JDCeFhv2mng==
   dependencies:
     "@lezer/common" "^0.15.0"
-
-"@lezer/python@^0.15.0":
-  version "0.15.0"
-  resolved "https://registry.yarnpkg.com/@lezer/python/-/python-0.15.0.tgz#cdaff609efdba9586ed7e0b383edd570b18427f2"
-  integrity sha512-KkbNfjLZCs/Ibx+3mekGu31qz+zCVkXHL+oNftRxB/lsINlz25SURR5z6wb94JpJt0yDFCEtn/2siAUybLOXiA==
-  dependencies:
-    "@lezer/lr" "^0.15.0"
 
 "@mdx-js/mdx@1.6.22", "@mdx-js/mdx@^1.6.21":
   version "1.6.22"
