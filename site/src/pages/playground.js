@@ -24,11 +24,11 @@ let font_stack: string = 'monospace'
 
 export default css\`
 nav {
-  width: ${10 + 10}px; /* operators */
+  width: \${10 + 10}px; /* operators */
 }
 
 ul {
-  font: 100% ${font_stack}; /* using variables */
+  font: 100% \${font_stack}; /* using variables */
 }
 \``,
         extensions: [
