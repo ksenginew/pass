@@ -5,6 +5,8 @@ import { EditorState, EditorView, basicSetup } from "@codemirror/basic-setup";
 import { javascript } from "@codemirror/lang-javascript";
 import styles from "./playground.module.css";
 import BrowserOnly from "@docusaurus/BrowserOnly";
+import Head from "@docusaurus/Head";
+import { transform } from "sucrase";
 
 function CodeEditor() {
   let parent = createRef();
@@ -17,11 +19,11 @@ function CodeEditor() {
 
     let editor = new EditorView({
       state: EditorState.create({
-        doc: `
+        doc: `import { css } from '@passlang/core'
 
-let font_stack = 'monospace'
+let font_stack: string = 'monospace'
 
-export default \`
+export default css\`
 nav {
   width: \${10 + 10}px; /* operators */
 }
@@ -42,9 +44,22 @@ ul {
               try {
                 new Function("url", "return import(url)")(
                   URL.createObjectURL(
-                    new Blob([editor.state.doc.toString()], {
-                      type: "text/javascript",
-                    })
+                    new Blob(
+                      [
+                        transform(
+                          editor.state.doc
+                            .toString()
+                            .replace(
+                              /(?<=import[\W].+?[\W]from\s*['"])/g,
+                              "https://cdn.skypack.dev/"
+                            ),
+                          { transforms: ["typescript"] }
+                        ).code,
+                      ],
+                      {
+                        type: "text/javascript",
+                      }
+                    )
                   )
                 ).then((module) => setCode(module.default));
               } catch (e) {
