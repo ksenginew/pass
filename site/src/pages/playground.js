@@ -39,7 +39,6 @@ ul {
           }),
           EditorView.updateListener.of((v) => {
             if (v.docChanged) {
-              document.querySelector("." + styles.preview).textContent = "";
               try {
                 new Function("url", "return import(url)")(
                   URL.createObjectURL(
