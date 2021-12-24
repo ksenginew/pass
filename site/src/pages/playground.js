@@ -18,13 +18,22 @@ function CodeEditor() {
 
     let editor = new EditorView({
       state: EditorState.create({
-        doc: `if 'Unv is awesome!'
-    print('Hello World!')
-# keep editing for live results
-`,
+        doc: `import { css } from '@passlang/core'
+
+let font_stack: string = 'monospace'
+
+export default css\`
+nav {
+  width: ${10 + 10}px; /* operators */
+}
+
+ul {
+  font: 100% ${font_stack}; /* using variables */
+}
+\``,
         extensions: [
           basicSetup,
-          python(),
+          javascript(),
           EditorView.theme({
             "&": { height: "40vh" },
             ".cm-scroller": { overflow: "auto" }
