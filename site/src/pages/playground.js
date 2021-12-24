@@ -18,11 +18,11 @@ function CodeEditor() {
 
     let editor = new EditorView({
       state: EditorState.create({
-        doc: `import { css } from '@passlang/core'
+        doc: `
 
-let font_stack: string = 'monospace'
+let font_stack = 'monospace'
 
-export default css\`
+export default \`
 nav {
   width: \${10 + 10}px; /* operators */
 }
@@ -45,6 +45,7 @@ ul {
                 window.import(URL.createObjectURL(new Blob([editor.state.doc.toString()], {type: 'text/javascript'}))).then(module => setCode(module.default))
               } catch(e) {
                 setCode(e.toString())
+                console.log(e)
               }
             }
           })
