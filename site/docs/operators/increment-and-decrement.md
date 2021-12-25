@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-### Increment and decrement
+# Increment and decrement
 
 Postfix/prefix increment and postfix/prefix decrement operators.
 
