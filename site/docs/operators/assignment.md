@@ -1,63 +1,75 @@
 ---
-sidebar_position: 3
+sidebar_position:  9
 ---
 
-# Assignment
+# Assignment operators
 
-## Assignment Operators
+An assignment operator assigns a value to its left operand based on the value of its right operand.
 
-Assignment operators assign values to JavaScript variables.
+[`=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment)
 
-## Assignment Examples
+Assignment operator.
 
-The  `=`  assignment operator assigns a value to a variable.
+[`*=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication_assignment)
 
-### Assignment
+Multiplication assignment.
 
-let  x =  10;
+[`**=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation_assignment)
 
-[Try it Yourself »](https://www.w3schools.com/js/tryit.asp?filename=tryjs_assign_equal)
+Exponentiation assignment.
 
-The  `+=`  assignment operator adds a value to a variable.
+[`/=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Division_assignment)
 
-### Assignment
+Division assignment.
 
-let  x =  10;  
-x +=  5;
+[`%=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder_assignment)
 
-[Try it Yourself »](https://www.w3schools.com/js/tryit.asp?filename=tryjs_assign_plusequal)
+Remainder assignment.
 
-The  `-=`  assignment operator subtracts a value from a variable.
+[`+=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition_assignment)
 
-### Assignment
+Addition assignment.
 
-let  x =  10;  
-x -=  5;
+[`-=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction_assignment)
 
-[Try it Yourself »](https://www.w3schools.com/js/tryit.asp?filename=tryjs_assign_minequal)
+Subtraction assignment
 
-The  `*=`  assignment operator multiplies a variable.
+[`<<=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)
 
-### Assignment
+Left shift assignment.
 
-let  x =  10;  
-x *=  5;
+[`>>=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment)
 
-[Try it Yourself »](https://www.w3schools.com/js/tryit.asp?filename=tryjs_assign_multequal)
+Right shift assignment.
 
-The  `/=`  assignment divides a variable.
+[`>>>=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment)
 
-### Assignment
+Unsigned right shift assignment.
 
-let  x =  10;  
-x /=  5;
+[`&=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)
 
-[Try it Yourself »](https://www.w3schools.com/js/tryit.asp?filename=tryjs_assign_divequal)
+Bitwise AND assignment.
 
-The  `%=`  assignment operator assigns a remainder to a variable.
+[`^=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment)
 
-### Assignment
-```
-let  x =  10;  
-x %=  5;
-```
+Bitwise XOR assignment.
+
+[`|=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)
+
+Bitwise OR assignment.
+
+[`&&=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)
+
+Logical AND assignment.
+
+[`||=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)
+
+Logical OR assignment.
+
+[`??=`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment)
+
+Logical nullish assignment.
+
+[`[a, b] = [1, 2]`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)  [`{a, b} = {a:1, b:2}`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+
+Destructuring assignment allows you to assign the properties of an array or object to variables using syntax that looks similar to array or object literals.
