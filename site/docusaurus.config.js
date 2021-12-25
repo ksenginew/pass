@@ -49,7 +49,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'tutorial',
+            docId: 'tutorial/introduction',
             position: 'left',
             label: 'Tutorial',
           },
@@ -69,7 +69,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/tutorial/',
+                to: '/docs/tutorial/introduction',
               },
             ],
           },
