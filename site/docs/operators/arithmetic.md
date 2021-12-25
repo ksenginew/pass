@@ -1,119 +1,26 @@
 ---
 sidebar_position: 2
 ---
-# Arithmetic
+# Arithmetic operators
 
-## Arithmetic Operators
+Arithmetic operators take numerical values (either literals or variables) as their operands and return a single numerical value.
 
-Arithmetic operators perform arithmetic on numbers (literals or variables).
+[`+`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
 
-## Arithmetic Operations
+Addition operator.
 
-A typical arithmetic operation operates on two numbers.
+[`-`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
 
-The two numbers can be literals:
+Subtraction operator.
 
-```js
-let  x =  100  +  50;
-```
-or variables:
+[`/`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Division)
 
-```js
-let  x = a + b;
-```
+Division operator.
 
-or expressions:
+[`*`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
 
-```js
-let  x = (100  +  50) * a;
-```
+Multiplication operator.
 
-## Adding
+[`%`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
 
-The  **addition**  operator (`+`) adds numbers:
-
-```js
-let  x =  5;  
-let  y =  2;  
-let  z = x + y;
-```
-
-## Subtracting
-
-The  **subtraction**  operator (`-`) subtracts numbers.
-
-```js
-let  x =  5;  
-let  y =  2;  
-let  z = x - y;
-```
-
-## Multiplying
-
-The  **multiplication**  operator (`*`) multiplies numbers.
-
-```js
-let  x =  5;  
-let  y =  2;  
-let  z = x * y;
-```
-
-## Dividing
-
-The  **division**  operator (`/`) divides numbers.
-
-```js
-let  x =  5;  
-let  y =  2;  
-let  z = x / y;
-```
-
-## Remainder
-
-The  **modulus**  operator (`%`) returns the division remainder.
-
-```js
-let  x =  5;  
-let  y =  2;  
-let  z = x % y;
-```
-
-In arithmetic, the division of two integers produces a  **quotient**  and a  **remainder**.
-
-In mathematics, the result of a  **modulo operation**  is the  **remainder**  of an arithmetic division.
-
-## Incrementing
-
-The  **increment**  operator (`++`) increments numbers.
-
-```js
-let  x =  5;  
-x++;  
-let  z = x;
-```
-
-## Decrementing
-
-The  **decrement**  operator (`--`) decrements numbers.
-
-```js
-let  x =  5;  
-x--;  
-let  z = x;
-```
-
-## Exponentiation
-
-The  **exponentiation**  operator (`**`) raises the first operand to the power of the second operand.
-
-```js
-let  x =  5;  
-let  z =  x **  2; // result is 25
-```
-
-x ** y produces the same result as  `Math.pow(x,y)`:
-
-```js
-let  x =  5;  
-let  z =  Math.pow(x,2); // result is 25
-```
+Remainder operator.
