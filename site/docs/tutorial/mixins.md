@@ -10,19 +10,9 @@ Pass lets you create CSS code that is to be reused throughout the website.
 ## Defining a Mixin
 
 Pass mixin Syntax:
-```js
-{  
-  property:  value, 
-  property:  value,
-  ...  
-}
-```
-> Note: `,` should be used instead of `;`
-
-Or
 
 ```js
-css`  
+let mixin_name = css`  
   property:  value;
   property:  value;
   ...
@@ -31,18 +21,7 @@ css`
 The following example creates a mixin named "important_text":
 
 Pass Syntax:
-```js
-let important_text =  {  
-  color:  'red',
-  font_size:  '25px',
-  font_weight:  'bold',
-  border:  '1px solid blue'
-}
-```
-> Note: use `_` instead of `-` in property names.
-> Note: use double or single quotes around values to make them strings. Otherwise it's a syntax error.
 
- Or
 ```js
 let important_text =  css`  
   color:  red;
@@ -93,15 +72,6 @@ CSS output:
 
 A mixin can also include other mixins:
 
-Pass Syntax:
-```js
-let special_text = {  
-  ...important_text, 
-  ...link, 
-  ...special_border
-}
-```
-Or
 ```js
 let special_text = css` 
   ${important_text}
@@ -119,15 +89,9 @@ Here is how to define a mixin with arguments:
 Pass Syntax:
 ```js
 /* Define mixin with two arguments */  
-let bordered = (color, width) => ({  
-  border:  `${width} solid ${color}`
-})  
-// Or
-/* Uncomment me
 let bordered = (color, width) => css`  
   border:  ${width} solid ${color};
 `
-*/
 
 .myArticle  {  
   ${bordered('blue', '1px') // Call mixin with two values
@@ -161,9 +125,9 @@ It is also possible to define default values for mixin variables:
 
 Pass Syntax:
 ```js
-let bordered = (color='blue', width='1px')  => ({  
-  border:  `${width} solid ${color}`  
-})
+let bordered = (color='blue', width='1px') => css`  
+  border:  ${width} solid ${color};
+`
 ```
   
 Then, you only need to specify the values that change when you include the mixin:
@@ -183,17 +147,16 @@ Here is an example for transform:
 
 Pass Syntax:
 ```js
-let transform = (property) => ({  
-  _webkit_transform:  property, 
-  _ms_transform:  property,
-  transform:  property,
-})
+let transform = (property) => css` 
+  _webkit_transform:  ${property}; 
+  _ms_transform:  ${property};
+  transform:  ${property};
+`
   
 .myBox  {  
   ${transform(rotate('20deg'))}
 }
 ```
-  
 
 After compilation, the CSS will look like this:
 
