@@ -56,7 +56,7 @@ export default function CodeBlock({
       )}
     >
       {codeBlockTitle && (
-        <div style={style} className={styles.codeBlockTitle}>
+        <div className={styles.codeBlockTitle}>
           {codeBlockTitle}
         </div>
       )}
@@ -64,7 +64,6 @@ export default function CodeBlock({
         <pre
           tabIndex={0}
           className={clsx(styles.codeBlock, "thin-scrollbar")}
-          style={style}
         >
           <code
             ref={container}
