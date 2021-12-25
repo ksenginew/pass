@@ -1,0 +1,10 @@
+{
+  "position": 2,
+  "label": "Tutorial",
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "type": "doc",
+    "id": "tutorial/introduction"
+  }
+}
