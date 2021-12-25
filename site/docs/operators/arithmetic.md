@@ -1,7 +1,9 @@
 ---
 sidebar_position: 2
 ---
-# Arithmetic Operators
+# Arithmetic
+
+## Arithmetic Operators
 
 Arithmetic operators perform arithmetic on numbers (literals or variables).
 
