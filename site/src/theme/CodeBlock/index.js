@@ -38,7 +38,7 @@ export default function CodeBlock({
   ).replace(/\n$/, "");
 
   useEffect(() => {
-    Prism.highlightElement(ref.current);
+    Prism.highlightElement(container.current);
   }, [children]);
 
   const handleCopyCode = () => {
