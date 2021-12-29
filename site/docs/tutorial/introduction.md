@@ -40,7 +40,6 @@ So, how many times do you need to type those HEX values? A LOT of times. And wha
 
 Instead of typing the above values a lot of times, you can use Pass and write this:
 
-### Pass Example
 ```js
 // import basit utility
 import { css } from '@passlang/core'
@@ -85,7 +84,6 @@ Pass files can have any file extension. It depends on your choice
 
 Pass supports standard CSS comments  `/* comment */` and standard JavaScript comments `/* comment */ and // comment`.
 
-### Pass Example
 ```js
 /* define primary colors */
 // Or define primary colors
