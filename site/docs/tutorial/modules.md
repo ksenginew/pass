@@ -51,7 +51,7 @@ and now we want to import the "reset.js" file into another file called "standard
 Here is how we do it
 
 Pass Syntax (standard.js):
-```
+```js
 import { css } from '@passlang/core'
 import reset from "./reset"
 
