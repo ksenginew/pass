@@ -23,7 +23,6 @@ import  any_name from 'file_path'
 
 You can import as many files as you need in the main file:
 
-### Example
 ```js
 import variables from "./variables";  
 import colors from "./colors";  
@@ -31,8 +30,6 @@ import reset from "./reset";
 ```
   
 Let's look at an example: Let's assume we have a reset file called "reset.js", that looks like this:
-
-### Example
 
 Pass Syntax (reset.js):
 ```js
@@ -88,7 +85,6 @@ body  {
 
 You can export and import any data between modules.
 
-### Example
 
 "colors.js":
 ```js
@@ -97,7 +93,6 @@ export let my_blue = '#4169E1'
 export let my_green = '#8FBC8F'
 ```
 
-### Example
 ```js
 import { my_blue, my_pink } from "./colors"; 
 
