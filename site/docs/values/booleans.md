@@ -1,7 +1,7 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 ---
-# Booleans
+# true or false
 
  Boolean represents one of two values:  **true**  or  **false**.
 
