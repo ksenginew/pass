@@ -30,3 +30,6 @@ String type is used to represent textual data.
 
 In computer science, an object is a value in memory which is possibly referenced by an  identifier(variable name).
 
+## Arrays
+
+Array is a list of primitive or object values. and Arrays are one kind of objects.
