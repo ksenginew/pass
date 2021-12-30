@@ -9,7 +9,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.pass.js$/,
+        test: /\.pass\.js$/,
         type: 'javascript/auto',
         use: ["style-loader", "css-loader"],
       },
