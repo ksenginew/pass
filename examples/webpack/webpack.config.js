@@ -6,4 +6,13 @@ module.exports = {
     path: path.resolve(__dirname, '_dist'),
     filename: 'bundle.js',
   },
+  module: {
+    rules: [
+      {
+        test: /\.pass.js$/,
+        type: 'javascript/auto',
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
 };
