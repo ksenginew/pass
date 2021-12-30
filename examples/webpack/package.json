@@ -4,7 +4,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "",
-  "scripts": {},
+  "scripts": {
+    "build": "webpack"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
