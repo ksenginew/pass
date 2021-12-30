@@ -10,8 +10,8 @@ module.exports = {
     rules: [
       {
         test: /\.pass\.js$/,
-        type: 'javascript/auto',
-        use: ["style-loader", "css-loader"],
+        type: 'asset/source',
+        use: ["./pass-loader.js", "style-loader", "css-loader"],
       },
     ],
   },
