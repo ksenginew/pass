@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@passlang/core": "workspace:^0.0.1",
+    "@passlang/core": "workspace:^",
     "webpack": "^5.65.0"
   }
 }
