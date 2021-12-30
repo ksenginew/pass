@@ -11,7 +11,7 @@ module.exports = {
       {
         test: /\.pass\.js$/,
         type: 'asset/source',
-        use: ["./pass-loader.js", "style-loader", "css-loader"],
+        use: ["style-loader", "css-loader", "./pass-loader.js"],
       },
     ],
   },
