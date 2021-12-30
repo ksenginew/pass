@@ -4,9 +4,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "",
-  "scripts": {
-  },
+  "scripts": {},
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@passlang/core": "workspace:^0.0.1",
+    "webpack": "^5.65.0"
+  }
 }
