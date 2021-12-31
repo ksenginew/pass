@@ -7,6 +7,10 @@ sidebar_position: 1
 
 Before you continue you should have a basic understanding of [CSS](https://mdn.io/css).
 
+It's better if you have a basic understanding of [JavaScript](https://mdn.io). And you can learn [TypeScript](https://typescriptlang.com) for strongly typed language. Also you can learn [coffeescript](https://coffeescript.org/) or any flavour of JavaScript.
+
+But we'll use JavaScript in this tutorial.
+
 ## What is Pass?
 
 **Pass**  stands for  **P**rogrammatically  **A**wesome  **S**tyle**s**heet
