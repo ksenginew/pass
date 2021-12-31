@@ -1,8 +1,23 @@
 ---
 sidebar_position: 2
 ---
-#  Installation
-
+const Item = ({ icon, color, ...props }) => {
+  return (
+  <button className="button button--secondary">
+  <div style={{
+    WebkitMask: `url(${icon}) no-repeat`,
+    mask: `url(${icon}) no-repeat`,
+    WebkitMaskSize: '100% 100%',
+    maskSize: '100% 100%',
+    backgroundColor: color,
+    height: '5em',
+    width: '5em',
+  }} >
+  </div>
+  <div {...props}/>
+  </button>
+  )
+}
 
 # Installation
 
@@ -49,9 +64,9 @@ Svelte
 
 ## Editors
 
-
-    
-VS Code
+<Item icon="https://simpleicons.org/icons/visualstudiocode.svg" color="#007ACC">
+    VS Code
+</Item>
 
 <!--
 WebStorm
@@ -60,17 +75,11 @@ WIP
 -->
 ## API
 
-<button className="button button--secondary">
-<div style={{
-  mask: `url(https://simpleicons.org/icons/javascript.svg) no-repeat`,
-  maskSize: '100% 100%',
-  backgroundColor: "#F7DF1E",
-  height: '5em',
-  width: '5em',
-}} >
-</div>
-JavaScript
-</button>
+<Item icon="https://simpleicons.org/icons/javascript.svg" color="#F7DF1E">
+    JavaScript
+</Item>
+
+---
 
 > Didn't see the framework you use?  [Submit a framework request on GitHub](https://github.com/ksenginew/pass/issues/new).
      
