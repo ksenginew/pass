@@ -1,4 +1,6 @@
 const path = require('path');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const devMode = process.env.NODE_ENV !== "production";
 
 module.exports = {
   entry: './src/index.js',
@@ -9,10 +11,16 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.pass\.js$/,
+        test: /\.pass\.js$/i,
         type: 'asset/source',
-        use: ["style-loader", "css-loader", "./pass-loader.js"],
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          "postcss-loader",
+          "./pass-loader.js"
+        ],
       },
     ],
   },
+  plugins: [new MiniCssExtractPlugin()],
 };
