@@ -64,7 +64,7 @@ WIP
 <div style={{
   mask: `url(https://simpleicons.org/icons/javascript.svg) no-repeat`,
   maskSize: '100% 100%',
-  backgroundColor': "#F7DF1E",
+  backgroundColor: "#F7DF1E",
   height: '5em',
   width: '5em',
 }} >
