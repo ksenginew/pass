@@ -5,7 +5,7 @@
   "description": "",
   "main": "",
   "scripts": {
-    "build": "webpack"
+    "pack": "webpack"
   },
   "keywords": [],
   "author": "",
