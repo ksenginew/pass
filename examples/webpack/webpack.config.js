@@ -1,6 +1,5 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const devMode = process.env.NODE_ENV !== "production";
 
 module.exports = {
   entry: './src/index.js',
@@ -22,8 +21,5 @@ module.exports = {
       },
     ],
   },
-  plugins: [new MiniCssExtractPlugin({
-    filename: 'bundle.css',
-    chunkFilename: 'chunk.css',
-  })],
+  plugins: [new MiniCssExtractPlugin()],
 };
