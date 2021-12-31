@@ -1,2 +1,2 @@
-import './styles.pass';
+import './styles.pass.ts';
 
