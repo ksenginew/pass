@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 ---
-const Item = ({ icon, color, ...props }) => {
+export const Item = ({ icon, color, ...props }) => {
   return (
   <button className="button button--secondary">
   <div style={{
