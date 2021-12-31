@@ -22,5 +22,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [new MiniCssExtractPlugin()],
+  plugins: [new MiniCssExtractPlugin({
+    chunkFilename: '[name].js',
+  })],
 };
