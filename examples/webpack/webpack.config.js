@@ -10,6 +10,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.tsx?$/,
+        loader: 'ts-loader'
+      },
+      {
         test: /\.pass\.js$/i,
         type: 'asset/source',
         use: [
