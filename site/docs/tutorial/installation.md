@@ -1,8 +1,11 @@
 ---
 sidebar_position: 2
 ---
-export const Item = ({ icon, color, ...props }) => {
+import Link from '@docusaurus/Link';
+
+export const Item = ({ icon, color, to, ...props }) => {
   return (
+  <Link to={to}>
   <button className="button button--secondary">
   <div style={{
     WebkitMask: `url(${icon}) no-repeat`,
@@ -16,6 +19,7 @@ export const Item = ({ icon, color, ...props }) => {
   </div>
   <div {...props}/>
   </button>
+  </Link>
   )
 }
 
@@ -27,8 +31,9 @@ Pass provides  **first-class integrations**  for your favorite tools. Select you
 
 Support for build-tools are framework-agnostic. They work for most frameworks without specific configurations.
 
-
-Webpack
+<Item icon="https://simpleicons.org/icons/webpack.svg" color="#8DD6F9"  to="integrations/webpack">
+    Webpack
+</Item>
 
 <!--
 Vite
@@ -64,7 +69,7 @@ Svelte
 
 ## Editors
 
-<Item icon="https://simpleicons.org/icons/visualstudiocode.svg" color="#007ACC">
+<Item icon="https://simpleicons.org/icons/visualstudiocode.svg" color="#007ACC"  to="integrations/vscode">
     VS Code
 </Item>
 
@@ -75,7 +80,7 @@ WIP
 -->
 ## API
 
-<Item icon="https://simpleicons.org/icons/javascript.svg" color="#F7DF1E">
+<Item icon="https://simpleicons.org/icons/javascript.svg" color="#F7DF1E" to="integrations/javascript">
     JavaScript
 </Item>
 
