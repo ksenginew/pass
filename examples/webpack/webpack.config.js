@@ -19,6 +19,17 @@ module.exports = {
           "./pass-loader.js"
         ],
       },
+      {
+        test: /\.pass\.ts$/i,
+        type: 'asset/source',
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          "postcss-loader",
+          "./pass-loader.js",
+          "ts-loader"
+        ],
+      },
     ],
   },
   plugins: [new MiniCssExtractPlugin()],
