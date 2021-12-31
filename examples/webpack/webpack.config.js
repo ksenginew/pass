@@ -14,12 +14,12 @@ module.exports = {
         test: /\.pass\.js$/i,
         type: 'asset/source',
         use: [
-          MiniCssExtractPlugin.loader,
+//          MiniCssExtractPlugin.loader,
           "css-loader",
           "./pass-loader.js"
         ],
       },
     ],
   },
-  plugins: [new MiniCssExtractPlugin()],
+//  plugins: [new MiniCssExtractPlugin()],
 };
