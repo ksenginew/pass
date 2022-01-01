@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
 ---
+# Installation
+
 import Link from '@docusaurus/Link';
 
 export const Item = ({ icon, color, to, ...props }) => {
@@ -22,8 +24,6 @@ export const Item = ({ icon, color, to, ...props }) => {
   </Link>
   )
 }
-
-# Installation
 
 Pass provides  **first-class integrations**  for your favorite tools. Select yours and get started.
 
