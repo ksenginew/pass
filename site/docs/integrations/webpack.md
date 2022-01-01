@@ -1,4 +1,5 @@
 ---
+sidebar_label: Webpack
 sidebar_position: 2
 ---
 # Integration for  [webpack](https://webpack.js.org/)
