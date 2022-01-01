@@ -31,7 +31,7 @@ Pass provides  **first-class integrations**  for your favorite tools. Select you
 
 Support for build-tools are framework-agnostic. They work for most frameworks without specific configurations.
 
-<Item icon="https://simpleicons.org/icons/webpack.svg" color="#8DD6F9"  to="integrations/webpack">
+<Item icon="https://simpleicons.org/icons/webpack.svg" color="#8DD6F9"  to="/docs/integrations/webpack">
     Webpack
 </Item>
 
@@ -69,7 +69,7 @@ Svelte
 
 ## Editors
 
-<Item icon="https://simpleicons.org/icons/visualstudiocode.svg" color="#007ACC"  to="integrations/vscode">
+<Item icon="https://simpleicons.org/icons/visualstudiocode.svg" color="#007ACC"  to="/docs/integrations/vscode">
     VS Code
 </Item>
 
@@ -80,7 +80,7 @@ WIP
 -->
 ## API
 
-<Item icon="https://simpleicons.org/icons/javascript.svg" color="#F7DF1E" to="integrations/javascript">
+<Item icon="https://simpleicons.org/icons/javascript.svg" color="#F7DF1E" to="/docs/integrations/javascript">
     JavaScript
 </Item>
 
