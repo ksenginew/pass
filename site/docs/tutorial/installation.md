@@ -73,11 +73,22 @@ Svelte
     VS Code
 </Item>
 
-<!--
-WebStorm
+<Item icon="https://simpleicons.org/icons/sublimetext.svg" color="#FF9800"  to="/docs/integrations/sublime">
+    Sublime Text
+</Item>
 
-WIP
--->
+<Item icon="https://simpleicons.org/icons/atom.svg" color="#66595C"  to="/docs/integrations/atom">
+    Atom
+</Item>
+
+<Item icon="https://simpleicons.org/icons/visualstudio.svg" color="#808080"  to="/docs/integrations/vs">
+    Visual Studio
+</Item>
+
+<Item icon="https://simpleicons.org/icons/webstorm.svg" color="#000000"  to="/docs/integrations/webstorm">
+    WebStorm
+</Item>
+
 ## API
 
 <Item icon="https://simpleicons.org/icons/javascript.svg" color="#F7DF1E" to="/docs/integrations/javascript">
