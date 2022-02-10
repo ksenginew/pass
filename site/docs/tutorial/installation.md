@@ -8,7 +8,7 @@ import Link from '@docusaurus/Link';
 export const Item = ({ icon, color, to, ...props }) => {
   return (
   <Link to={to}>
-  <button className="button button--outline button--secondary">
+  <button className="button button--outline button--secondary" style={{ margin: '0.5rem' }} >
   <div style={{
     WebkitMask: `url(${icon}) no-repeat`,
     mask: `url(${icon}) no-repeat`,
