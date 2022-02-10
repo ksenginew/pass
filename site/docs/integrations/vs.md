@@ -1,6 +1,6 @@
 ---
 sidebar_label: Visual Studio
-sidebar_position: 25
+sidebar_position: 24
 ---
 # Pass Intellisense for Visual Studio
 
