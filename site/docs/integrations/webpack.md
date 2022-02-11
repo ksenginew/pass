@@ -2,85 +2,66 @@
 sidebar_label: Webpack
 sidebar_position: 2
 ---
+
 # Integration for  [webpack](https://webpack.js.org/)
 
-## Getting Started
+## Install
 
-To begin, you'll need to install things:
+If you are proceeding setup with a custom webpack build, then please report any issues you find.
 
 ```bash
-yarn add webpack webpack-cli style-loader css-loader @passlang/core -D 
-# npm i webpack webpack-cli style-loader css-loader @passlang/core -D
-```
-We should create a new loader for this task.
-Create a new file named `pass-loader.js` and paste the following content.
-
-```js title="pass-loader.js"
-exports.pitch = async function (remaining) {
-  const result = await this.importModule(
-    this.resourcePath + '.webpack[javascript/auto]' + '!=!' + remaining
-  );
-  return result.default || result;
-};
+yarn add pass-loader -D 
+# npm i pass-loader -D
 ```
 
-Chain the  `pass-loader`  with the  [css-loader](https://webpack.js.org/loaders/css-loader/)  and the  [style-loader](https://webpack.js.org/loaders/style-loader/)  to immediately apply all styles to the DOM or the  [mini-css-extract-plugin](https://webpack.js.org/plugins/mini-css-extract-plugin/)  to extract it into a separate file.
+## Configure
+This is a minimal example for configure Webpack for pass
 
-Then add the loader to your Webpack configuration. For example:
-
-```js title="app.js"
-import "./styles.pass.js";
-```
-
-```js title="styles.pass.js"
-// import basit utility
-import { css } from '@passlang/core'
-
-// define variables for the primary colors
-let primary_1 = '#a2b9bc'
-let primary_2 = '#b2ad7f'
-let primary_3 = '#878f99'
-
-// use the variables and export CSS
-export default css`
-.main-header  {  
-  background-color:  ${primary_1};  
-}  
-  
-.menu-left  {  
-  background-color:  ${primary_2};  
-}  
-  
-.menu-right  {  
-  background-color:  ${primary_3};  
-}
-`
-```
-
-```js title="webpack.config.js"
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const devMode = process.env.NODE_ENV !== "production";
-
-module.exports = {
+_webpack.config.js_
+```js
+export default = {
+// for non ES modules, comment the above line and uncomment the following line.
+// module.exports = {
+  // ...
   module: {
     rules: [
       {
+        // test: /\.pass\.ts$/i, // for typescript
         test: /\.pass\.js$/i,
         use: [
-          devMode ? "style-loader" : MiniCssExtractPlugin.loader,
-          "css-loader",
-          "postcss-loader",
-          "./pass-loader.js",
+           // Other loaders...
+          'pass-loader',
         ],
       },
     ],
   },
-  plugins: [].concat(devMode ? [] : [new MiniCssExtractPlugin()]),
 };
 ```
+With Webpack, Pass is useless without necessary loaders and plugins.
 
-Finally run  `webpack`  via your preferred method.
+### Transpiling
+If you want to transpile your `.pass.js` files, Choose the loaders fits to your needs.
 
-For configuration 
-- [css-loader](https://webpack.js.org/loaders/css-loader/)
-- [style-loader](https://webpack.js.org/loaders/style-loader/)
+-   [`babel-loader`](https://webpack.js.org/loaders/babel-loader)  Loads ES2015+ code and transpiles to ES5 using  [Babel](https://babeljs.io/)
+-   [`buble-loader`](https://github.com/sairion/buble-loader)  Loads ES2015+ code and transpiles to ES5 using  [Bublé](https://buble.surge.sh/guide/)
+-   [`traceur-loader`](https://github.com/jupl/traceur-loader)  Loads ES2015+ code and transpiles to ES5 using  [Traceur](https://github.com/google/traceur-compiler#readme)
+-   [`ts-loader`](https://github.com/TypeStrong/ts-loader)  Loads  [TypeScript](https://www.typescriptlang.org/)  2.0+ like JavaScript
+-   [`coffee-loader`](https://webpack.js.org/loaders/coffee-loader)  Loads  [CoffeeScript](http://coffeescript.org/)  like JavaScript
+-   [`fengari-loader`](https://github.com/fengari-lua/fengari-loader/)  Loads Lua code using  [fengari](https://fengari.io/)
+-   [`elm-webpack-loader`](https://github.com/elm-community/elm-webpack-loader)  Loads  [Elm](https://elm-lang.org/)  like JavaScript
+
+### Styling
+Use following styling loaders provides some features to your styling.
+-   [`style-loader`](https://webpack.js.org/loaders/style-loader)  Add exports of a module as style to DOM
+-   [`css-loader`](https://webpack.js.org/loaders/css-loader)  Loads CSS file with resolved imports and returns CSS code
+-   [`less-loader`](https://webpack.js.org/loaders/less-loader)  Loads and compiles a LESS file
+-   [`sass-loader`](https://webpack.js.org/loaders/sass-loader)  Loads and compiles a SASS/SCSS file
+-   [`postcss-loader`](https://webpack.js.org/loaders/postcss-loader)  Loads and transforms a CSS/SSS file using  [PostCSS](http://postcss.org/)
+-   [`stylus-loader`](https://webpack.js.org/loaders/stylus-loader/)  Loads and compiles a Stylus file
+
+## Examples
+
+See  [official example](https://github.com/ksenginew/pass/tree/docs/examples/webpack)  for sample projects.
+
+
+Take a look at [CSS loader](https://webpack.js.org/loaders/css-loader/#examples) for production ready examples.
