@@ -20,7 +20,7 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           "css-loader",
           "postcss-loader",
-          "./pass-loader.js"
+          "pass-loader"
         ],
       },
       {
@@ -30,7 +30,7 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           "css-loader",
           "postcss-loader",
-          "./pass-loader.js",
+          "pass-loader",
           "ts-loader"
         ],
       },

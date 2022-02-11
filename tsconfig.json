@@ -11,6 +11,9 @@
       "passlang": [
         "packages/passlang/src"
       ],
+      "pass-loader": [
+        "packages/pass-loader/src"
+      ],
       "@passlang/*": [
         "packages/*/src"
       ]

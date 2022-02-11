@@ -1,0 +1,38 @@
+{
+  "name": "pass-loader",
+  "version": "0.0.1",
+  "description": "Webpack loader for next generation CSS preprocessor.",
+  "source": "src/index.ts",
+  "main": "dist/loader.js",
+  "umd:main": "dist/loader.umd.js",
+  "module": "dist/loader.esm.js",
+  "exports": {
+    "require": "./dist/loader.js",
+    "default": "./dist/loader.modern.js"
+  },
+  "types": "dist/loader.d.ts",
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksenginew/pass.git"
+  },
+  "keywords": [
+    "style",
+    "loader",
+    "pass",
+    "passlang",
+    "webpack",
+    "preprocessor",
+    "css"
+  ],
+  "author": "Kavindu Santhusa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ksenginew/pass/issues"
+  },
+  "homepage": "https://github.com/ksenginew/pass#readme",
+  "dependencies": {}
+}
