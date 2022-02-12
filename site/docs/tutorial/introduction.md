@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
 ---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 #  Introduction
 
 ## What You Should Already Know
@@ -44,6 +48,9 @@ So, how many times do you need to type those HEX values? A LOT of times. And wha
 
 Instead of typing the above values a lot of times, you can use Pass and write this:
 
+<Tabs>
+<TabItem value="js" label="JavaScript">
+
 ```js
 // import basit utility
 import { css } from '@passlang/core'
@@ -68,6 +75,65 @@ export default css`
 }
 `
 ```
+
+</TabItem>
+<TabItem value="ts" label="TypeScript">
+
+```ts
+// import basit utility
+import { css } from '@passlang/core'
+
+// define variables for the primary colors
+let primary_1: string = '#a2b9bc'
+let primary_2: string = '#b2ad7f'
+let primary_3: string = '#878f99'
+
+// use the variables and export CSS
+export default css`
+.main-header  {  
+  background-color:  ${primary_1};  
+}  
+  
+.menu-left  {  
+  background-color:  ${primary_2};  
+}  
+  
+.menu-right  {  
+  background-color:  ${primary_3};  
+}
+`
+```
+
+</TabItem>
+<TabItem value="coffee" label="CoffeScript">
+
+```coffee
+# import basit utility
+import { css } from '@passlang/core'
+
+# define variables for the primary colors
+primary_1 = '#a2b9bc'
+primary_2 = '#b2ad7f'
+primary_3 = '#878f99'
+
+# use the variables and export CSS
+export default css"""
+.main-header  {  
+  background-color:  #{primary_1};  
+}  
+  
+.menu-left  {  
+  background-color:  #{primary_2};  
+}  
+  
+.menu-right  {  
+  background-color:  #{primary_3};  
+}
+"""
+```
+
+</TabItem>
+</Tabs>
   
 So, when using Pass, and the primary color changes, you only need to change it in one place.
 
