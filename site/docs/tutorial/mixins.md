@@ -37,7 +37,7 @@ The  `${mixin}`  syntax is used to include a mixin.
 
 Pass include mixin Syntax:
 ```js
-css`
+export default css`
 selector {  
   ${mixin_name}
 }
@@ -49,7 +49,7 @@ So, to include the important_text mixin created above:
 
 Pass Syntax:
 ```js
-css`
+export default css`
 .danger  {  
   ${important_text}  
   background-color:  green;  
@@ -93,6 +93,7 @@ let bordered = (color, width) => css`
   border:  ${width} solid ${color};
 `
 
+export default css`
 .myArticle  {  
   ${bordered('blue', '1px') // Call mixin with two values
   }  
@@ -102,6 +103,7 @@ let bordered = (color, width) => css`
   ${bordered('red', '2px') // Call mixin with two values  
   }
 }
+`
 ```
   
 Notice that the arguments are set as variables and then used as the values (color and width) of the border property.
@@ -134,9 +136,11 @@ Then, you only need to specify the values that change when you include the mixin
 
 Pass Syntax:
 ```css
+export default css`
 .myTips  {  
   ${bordered('orange')} 
 }
+`
 ```
   
 ## Using a Mixin For Vendor Prefixes
@@ -152,10 +156,12 @@ let transform = (property) => css`
   _ms_transform:  ${property};
   transform:  ${property};
 `
-  
+
+export default css`
 .myBox  {  
   ${transform(rotate('20deg'))}
 }
+`
 ```
 
 After compilation, the CSS will look like this:
