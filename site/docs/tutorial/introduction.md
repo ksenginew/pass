@@ -150,15 +150,22 @@ Pass files can have any file extension. It depends on your choice
 - Typescript - `.ts`
 - CoffeeScrip - `.coffee`
 
+:::tip
+Use `.pass.js`(or `.pass.ts` or `.pass.coffee`) for entry files.
+:::
+
 ## Pass Comments
 
-Pass supports standard CSS comments  `/* comment */` and standard JavaScript comments `/* comment */ and // comment`.
+Pass supports standard CSS comments  `/* comment */` and standard JavaScript comments(`/* comment */` and `// comment`).
+
+<Tabs>
+<TabItem value="js" label="JavaScript">
 
 ```js
 /* define primary colors */
 // Or define primary colors
-$primary_1: #a2b9bc;  
-$primary_2: #b2ad7f;  
+let primary_1 = '#a2b9bc'
+let primary_2 = '#b2ad7f' 
 
 export default css`
 /* use the variables */  
@@ -169,3 +176,44 @@ ${''/* use the variables */}
 }
 `
 ```
+
+</TabItem>
+<TabItem value="ts" label="TypeScript">
+
+```ts
+/* define primary colors */
+// Or define primary colors
+let primary_1:string = '#a2b9bc'
+let primary_2:string = '#b2ad7f'
+
+export default css`
+/* use the variables */  
+${''/* use the variables */}
+.main-header  {  
+  background-color:  ${primary_1};  ${// here you can put an inline comment
+''}  
+}
+`
+```
+
+</TabItem>
+<TabItem value="coffee" label="CoffeScript">
+
+```coffee
+### define primary colors ###
+# Or define primary colors
+primary_1 = '#a2b9bc'  
+primary_2 = '#b2ad7f'  
+
+export default css"""
+/* use the variables */  
+#{''### use the variables ###}
+.main-header  {  
+  background-color:  #{primary_1};  #{# here you can put an inline comment
+''}  
+}
+"""
+```
+
+</TabItem>
+</Tabs>
