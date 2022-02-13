@@ -7,7 +7,7 @@ Pass keeps the CSS code DRY (Don't Repeat Yourself). One way to write DRY code i
 
 You can create small files with CSS snippets to include in other source files. Examples of such files can be: reset file, variables, colors, fonts, font-sizes, etc.
 
-## Pass Importing Files
+## Import Files
 
 Just like CSS, Pass also supports the  `@import`  directive.
 
@@ -81,7 +81,7 @@ body  {
 }
 ```
 
-## Pass import data
+## Import data
 
 You can export and import any data between modules.
 
@@ -103,4 +103,70 @@ body  {
   color:  ${my_blue};  
 }
 `
+```
+
+## Load members
+
+Importing all colors one by one is bad. So you can import all of them to a namespace.
+
+```js
+import * as colors from "./colors"; 
+
+export default css`  
+body  {  
+  font-family:  Helvetica, sans-serif;  
+  font-size:  18px;  
+  color:  ${colors.my_blue};  
+}
+`
+```
+
+## Rename imports
+
+If you want to import something that has a long name, you can rename it when importing. It's useful if you want to import different things from different modules that have same names.
+
+```js
+import { my_blue as new_blue, my_pink as new_blue } from "./colors"; 
+
+export default css`  
+body  {  
+  font-family:  Helvetica, sans-serif;  
+  font-size:  18px;  
+  color:  ${new_blue};  
+}
+`
+```
+
+## Export data
+
+As you did earlier, you can export some data from a module.
+
+```js
+export let my_pink = '#EE82EE'  
+export let my_blue = '#4169E1'  
+export let my_green = '#8FBC8F'
+```
+
+But your default export if reserved to export css
+
+```js
+export default css`
+...
+`
+```
+
+## Forward data
+
+You can import some data from a module and re export it.
+
+```js
+import { my_blue, my_pink } from "./colors"
+
+export { my_blue, my_pink }
+```
+
+But why 2 lines? You can use a one line to do it.
+
+```js
+export { my_blue, my_pink } from "./colors"
 ```
