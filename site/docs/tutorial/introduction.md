@@ -48,7 +48,7 @@ So, how many times do you need to type those HEX values? A LOT of times. And wha
 
 Instead of typing the above values a lot of times, you can use Pass and write this:
 
-<Tabs>
+<Tabs groupId="lang">
 <TabItem value="js" label="JavaScript">
 
 ```js
@@ -158,7 +158,7 @@ Use `.pass.js`(or `.pass.ts` or `.pass.coffee`) for entry files.
 
 Pass supports standard CSS comments  `/* comment */` and standard JavaScript comments(`/* comment */` and `// comment`).
 
-<Tabs>
+<Tabs groupId="lang">
 <TabItem value="js" label="JavaScript">
 
 ```js
