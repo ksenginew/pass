@@ -1,7 +1,6 @@
 {
-  "name": "unplugin-starter",
+  "name": "unplugin-paa",
   "version": "0.1.0",
-  "packageManager": "pnpm@7.1.1",
   "description": "Register global imports on demand for Vite and Webpack",
   "keywords": [
     "unplugin",
@@ -10,14 +9,14 @@
     "rollup",
     "transform"
   ],
-  "homepage": "https://github.com/antfu/unplugin-starter#readme",
+  "homepage": "https://github.com/ksenginew/pass/tree/main/packages/unplugin-pass#readme",
   "bugs": {
-    "url": "https://github.com/antfu/unplugin-starter/issues"
+    "url": "https://github.com/ksenginew/pass/tree/main/packages/unplugin-pass/issues"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/antfu/unplugin-starter.git"
+    "url": "git+https://github.com/ksenginew/pass/tree/main/packages/unplugin-pass.git"
   },
   "main": "dist/index.js",
   "module": "dist/index.mjs",
