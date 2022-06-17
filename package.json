@@ -4,8 +4,9 @@
   "version": "0.0.1",
   "scripts": {
     "test": "jest",
-    "build": "pnpm run build -r",
-    "dev": "pnpm run watch --parallel"
+    "build": "pnpm -r --filter=./packages/* run build",
+    "dev": "pnpm -r --parallel --filter=./packages/* run dev",
+    "format": "prettier --write ."
   },
   "repository": {
     "type": "git",
@@ -19,12 +20,17 @@
   },
   "homepage": "https://github.com/ksenginew/pass#readme",
   "devDependencies": {
-    "@changesets/cli": "^2.18.1",
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.3",
     "@types/jest": "^27.0.3",
-    "jest": "^27.4.5",
-    "microbundle": "^0.14.2",
+    "@types/node": "^18.0.0",
+    "jest": "^28.0.0",
     "prettier": "^2.5.1",
-    "ts-jest": "^27.1.1",
+    "rollup": "^2.75.6",
+    "rollup-plugin-terser": "^7.0.2",
+    "ts-jest": "^28.0.5",
+    "tslib": "^2.4.0",
     "typescript": "^4.5.4"
   }
 }

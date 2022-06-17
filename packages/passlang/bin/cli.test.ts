@@ -50,7 +50,7 @@ describe("cli", () => {
       ).toString()
     ).toMatchInlineSnapshot(`
       "Processing 1 files(__test__/javascript.js, ...)
-      Successfully built \\"__test__/javascript.js\\"
+      Successfully built \\".\\\\__test__\\\\javascript.js\\"
       "
     `);
     expect(
@@ -66,7 +66,7 @@ describe("cli", () => {
       ).toString()
     ).toMatchInlineSnapshot(`
       "Processing 1 files(__test__/typescript.ts, ...)
-      Successfully built \\"__test__/typescript.ts\\"
+      Successfully built \\".\\\\__test__\\\\typescript.ts\\"
       "
     `);
     expect(
@@ -80,8 +80,8 @@ describe("cli", () => {
       execSync("node ./packages/passlang/bin/cli.js __test__/*").toString()
     ).toMatchInlineSnapshot(`
       "Processing 2 files(__test__/javascript.js, ...)
-      Successfully built \\"__test__/javascript.js\\"
-      Successfully built \\"__test__/typescript.ts\\"
+      Successfully built \\".\\\\__test__\\\\javascript.js\\"
+      Successfully built \\".\\\\__test__\\\\typescript.ts\\"
       "
     `);
     expect(

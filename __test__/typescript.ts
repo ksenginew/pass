@@ -1,3 +1,3 @@
-const toExport = 'ts'
+const toExport = "ts";
 
-export default (toExport as string)
+export default toExport as string;

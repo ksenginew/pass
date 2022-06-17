@@ -1,12 +1,14 @@
 ---
 sidebar_position: 2
 ---
+
 # Installation
 
 import Link from '@docusaurus/Link';
 
 export const Item = ({ icon, color, to, ...props }) => {
-  return (
+return (
+
   <Link to={to}>
   <button className="button button--outline button--secondary" style={{ margin: '0.5rem' }} >
   <div style={{
@@ -25,7 +27,7 @@ export const Item = ({ icon, color, to, ...props }) => {
   )
 }
 
-Pass provides  **first-class integrations**  for your favorite tools. Select yours and get started.
+Pass provides **first-class integrations** for your favorite tools. Select yours and get started.
 
 ## Build Tools
 
@@ -97,6 +99,6 @@ Svelte
 
 ---
 
-> Didn't see the framework you use?  [Submit a framework request on GitHub](https://github.com/ksenginew/pass/issues/new).
-     
+> Didn't see the framework you use? [Submit a framework request on GitHub](https://github.com/ksenginew/pass/issues/new).
+
 Try the [playground](/playground)

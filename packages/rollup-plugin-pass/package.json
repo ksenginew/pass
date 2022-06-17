@@ -12,8 +12,8 @@
   },
   "types": "dist/loader.d.ts",
   "scripts": {
-    "build": "microbundle",
-    "dev": "microbundle watch"
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
   },
   "repository": {
     "type": "git",
@@ -35,7 +35,12 @@
     "url": "https://github.com/ksenginew/pass/issues"
   },
   "homepage": "https://github.com/ksenginew/pass#readme",
+  "optionalDependencies": {
+    "@rollup/pluginutils": "^4.1.2",
+    "rollup": "^2.75.6"
+  },
   "dependencies": {
-    "@rollup/pluginutils": "^4.1.2"
+    "es-module-lexer": "^0.10.5",
+    "magic-string": "^0.26.2"
   }
 }

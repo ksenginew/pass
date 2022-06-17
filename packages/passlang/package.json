@@ -13,8 +13,8 @@
   },
   "types": "dist/passlang.d.ts",
   "scripts": {
-    "build": "microbundle",
-    "dev": "microbundle watch"
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
   },
   "repository": {
     "type": "git",
@@ -35,9 +35,13 @@
   },
   "homepage": "https://github.com/ksenginew/pass#readme",
   "dependencies": {
+    "@passlang/core": "workspace:^",
+    "@types/glob": "^7.2.0",
+    "@types/minimist": "^1.2.2",
+    "glob": "^8.0.3",
     "globby": "^12.0.2",
+    "magic-string": "^0.26.2",
     "minimist": "^1.2.5",
-    "sucrase": "^3.20.3",
-    "@passlang/core": "workspace:^"
+    "sucrase": "^3.20.3"
   }
 }

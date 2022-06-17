@@ -1,4 +1,5 @@
 # @passlang/sass
+
 Sass support for next generation CSS preprocessor.",
 
 <table>
@@ -35,6 +36,7 @@ nav {
 }
 `
 ```
+
 </td>
 <td>
 
@@ -63,32 +65,34 @@ nav
 
 1. Install
 
-    Make sure that you installed [_Node.JS_](https://nodejs.org) and [_NPM_](https://npmjs.com)(or another package manager for Node.JS).
-    ```js
-    npm install @passlang/saas
-    ```
+   Make sure that you installed [_Node.JS_](https://nodejs.org) and [_NPM_](https://npmjs.com)(or another package manager for Node.JS).
+
+   ```js
+   npm install @passlang/saas
+   ```
+
 2. Import
-    ```js
-    import css, { sass, scss } from '@passlang/sass'
-    ```
+   ```js
+   import css, { sass, scss } from "@passlang/sass";
+   ```
 3. Use
-    ```js
-    css`
-    Styles...
-    `
-    ```
-    Or
-    ```js
-    sass().css`
-    Styles...
-    `
-    ```
-    Or
-    ```js
-    scss().css`
-    Styles...
-    `
-    ```
+   ```js
+   css`
+   Styles...
+   `;
+   ```
+   Or
+   ```js
+   sass().css`
+   Styles...
+   `;
+   ```
+   Or
+   ```js
+   scss().css`
+   Styles...
+   `;
+   ```
 
 > Contact me via [discussions](https://github.com/ksenginew/pass/discussions) for help.
 
@@ -105,57 +109,58 @@ This is a wrapper around Sass JS api.
 **Example**
 
 ```js
-import css from '@passlang/sass';
+import css from "@passlang/sass";
 
 css`
 Your SCSS here...
-`
+`;
 ```
 
 ### scss
 
 ```js
-(options?: StringOptions<"sync"> | undefined) => (strings: TemplateStringsArray, ...args: any[]) => string;
+(options?: StringOptions<"sync"> | undefined) =>
+  (strings: TemplateStringsArray, ...args: any[]) =>
+    string;
 ```
 
 **Example**
 
 ```js
-import { scss } from '@passlang/sass';
+import { scss } from "@passlang/sass";
 
 scss().css`
 Your SCSS here...
-`
+`;
 ```
 
 ### sass
 
 ```js
-(options?: StringOptions<"sync">) => (strings: TemplateStringsArray, ...args: any[]) => string;
+(options?: StringOptions<"sync">) =>
+  (strings: TemplateStringsArray, ...args: any[]) =>
+    string;
 ```
 
 **Example**
 
 ```js
-import { sass } from '@passlang/sass';
+import { sass } from "@passlang/sass";
 
 sass().css`
 Your SASS here...
-`
+`;
 ```
 
 You can pass options to `sass` and `scss` functions.
 
 ```js
-options = { style: "compressed" } // options
+options = { style: "compressed" }; // options
 sass(options).css`
 Your SASS here...
-`
+`;
 ```
 
 Read [Here](https://sass-lang.com/documentation/js-api/interfaces/StringOptionsWithoutImporter) for more information about options.
 
 **Read [Sass docs](https://sass-lang.com/documentation/js-api) for complete documentation.**
-
-
-

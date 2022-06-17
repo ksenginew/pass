@@ -1,7 +1,6 @@
 // import basit utility
 import { css } from "@passlang/core";
-// @ts-ignore
-import { primary_1, primary_2, primary_3 } from "./colors.pass.ts";
+import { primary_1, primary_2, primary_3 } from "./colors.pass.js";
 
 // use the variables and export CSS
 export default css`

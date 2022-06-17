@@ -1,0 +1,70 @@
+{
+  "name": "@passlang/plugin",
+  "version": "0.0.1",
+  "description": "Plugin of Pass CSS preprocessor for Vite, Rollup, Webpack, and more...",
+  "source": "src/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./vite": {
+      "require": "./dist/vite.js",
+      "import": "./dist/vite.mjs"
+    },
+    "./webpack": {
+      "require": "./dist/webpack.js",
+      "import": "./dist/webpack.mjs"
+    },
+    "./rollup": {
+      "require": "./dist/rollup.js",
+      "import": "./dist/rollup.mjs"
+    },
+    "./nuxt": {
+      "require": "./dist/nuxt.js",
+      "import": "./dist/nuxt.mjs"
+    },
+    "./types": {
+      "require": "./dist/types.js",
+      "import": "./dist/types.mjs"
+    },
+    "./*": "./*"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksenginew/pass.git"
+  },
+  "keywords": [
+    "style",
+    "core",
+    "pass",
+    "passlang",
+    "preprocessor",
+    "css",
+    "unplugin",
+    "vite",
+    "webpack",
+    "rollup"
+  ],
+  "author": "Kavindu Santhusa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ksenginew/pass/issues"
+  },
+  "homepage": "https://github.com/ksenginew/pass#readme",
+  "dependencies": {
+    "@rollup/pluginutils": "^4.1.2",
+    "passlang": "workspace:^0.0.1",
+    "unplugin": "^0.7.0"
+  },
+  "devDependencies": {
+    "rollup-plugin-styles": "^4.0.0"
+  }
+}

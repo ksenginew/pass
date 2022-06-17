@@ -1,37 +1,37 @@
-const path = require('path');
+const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  entry: './src/index.ts',
+  entry: "./src/index.ts",
   output: {
-    path: path.resolve(__dirname, '__dist__'),
-    filename: 'bundle.js',
+    path: path.resolve(__dirname, "__dist__"),
+    filename: "bundle.js",
   },
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: 'ts-loader'
+        loader: "ts-loader",
       },
       {
         test: /\.pass\.js$/i,
-        type: 'asset/source',
-        use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          "postcss-loader",
-          "pass-loader"
-        ],
-      },
-      {
-        test: /\.pass\.ts$/i,
-        type: 'asset/source',
+        type: "asset/source",
         use: [
           MiniCssExtractPlugin.loader,
           "css-loader",
           "postcss-loader",
           "pass-loader",
-          "ts-loader"
+        ],
+      },
+      {
+        test: /\.pass\.ts$/i,
+        type: "asset/source",
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          "postcss-loader",
+          "pass-loader",
+          "ts-loader",
         ],
       },
     ],

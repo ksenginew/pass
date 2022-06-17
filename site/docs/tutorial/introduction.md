@@ -5,7 +5,7 @@ sidebar_position: 1
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-#  Introduction
+# Introduction
 
 ## What You Should Already Know
 
@@ -17,9 +17,10 @@ But we'll use JavaScript in this tutorial.
 
 ## What is Pass?
 
-**Pass**  stands for  **P**rogrammatically  **A**wesome  **S**tyle**s**heet
+**Pass** stands for **P**rogrammatically **A**wesome **S**tyle**s**heet
 
 There are many CSS preprocessor. Some popular ones are.
+
 - Sass
 - Less
 - Stylus
@@ -53,27 +54,27 @@ Instead of typing the above values a lot of times, you can use Pass and write th
 
 ```js
 // import basit utility
-import { css } from '@passlang/core'
+import { css } from "@passlang/core";
 
 // define variables for the primary colors
-let primary_1 = '#a2b9bc'
-let primary_2 = '#b2ad7f'
-let primary_3 = '#878f99'
+let primary_1 = "#a2b9bc";
+let primary_2 = "#b2ad7f";
+let primary_3 = "#878f99";
 
 // use the variables and export CSS
 export default css`
-.main-header  {  
-  background-color:  ${primary_1};  
-}  
-  
-.menu-left  {  
-  background-color:  ${primary_2};  
-}  
-  
-.menu-right  {  
-  background-color:  ${primary_3};  
-}
-`
+  .main-header {
+    background-color: ${primary_1};
+  }
+
+  .menu-left {
+    background-color: ${primary_2};
+  }
+
+  .menu-right {
+    background-color: ${primary_3};
+  }
+`;
 ```
 
 </TabItem>
@@ -81,27 +82,27 @@ export default css`
 
 ```ts
 // import basit utility
-import { css } from '@passlang/core'
+import { css } from "@passlang/core";
 
 // define variables for the primary colors
-let primary_1: string = '#a2b9bc'
-let primary_2: string = '#b2ad7f'
-let primary_3: string = '#878f99'
+let primary_1: string = "#a2b9bc";
+let primary_2: string = "#b2ad7f";
+let primary_3: string = "#878f99";
 
 // use the variables and export CSS
 export default css`
-.main-header  {  
-  background-color:  ${primary_1};  
-}  
-  
-.menu-left  {  
-  background-color:  ${primary_2};  
-}  
-  
-.menu-right  {  
-  background-color:  ${primary_3};  
-}
-`
+  .main-header {
+    background-color: ${primary_1};
+  }
+
+  .menu-left {
+    background-color: ${primary_2};
+  }
+
+  .menu-right {
+    background-color: ${primary_3};
+  }
+`;
 ```
 
 </TabItem>
@@ -118,16 +119,16 @@ primary_3 = '#878f99'
 
 # use the variables and export CSS
 export default css"""
-.main-header  {  
-  background-color:  #{primary_1};  
-}  
-  
-.menu-left  {  
-  background-color:  #{primary_2};  
-}  
-  
-.menu-right  {  
-  background-color:  #{primary_3};  
+.main-header  {
+  background-color:  #{primary_1};
+}
+
+.menu-left  {
+  background-color:  #{primary_2};
+}
+
+.menu-right  {
+  background-color:  #{primary_3};
 }
 """
 ```
@@ -145,7 +146,8 @@ You can convert Pass to CSS with Pass CLI.
 
 ## Pass File Type
 
-Pass files can have any file extension. It depends on your choice 
+Pass files can have any file extension. It depends on your choice
+
 - JavaScript - `.js` (default)
 - Typescript - `.ts`
 - CoffeeScrip - `.coffee`
@@ -156,7 +158,7 @@ Use `.pass.js`(or `.pass.ts` or `.pass.coffee`) for entry files.
 
 ## Pass Comments
 
-Pass supports standard CSS comments  `/* comment */` and standard JavaScript comments(`/* comment */` and `// comment`).
+Pass supports standard CSS comments `/* comment */` and standard JavaScript comments(`/* comment */` and `// comment`).
 
 <Tabs groupId="lang">
 <TabItem value="js" label="JavaScript">
@@ -164,17 +166,20 @@ Pass supports standard CSS comments  `/* comment */` and standard JavaScript com
 ```js
 /* define primary colors */
 // Or define primary colors
-let primary_1 = '#a2b9bc'
-let primary_2 = '#b2ad7f' 
+let primary_1 = "#a2b9bc";
+let primary_2 = "#b2ad7f";
 
 export default css`
-/* use the variables */  
-${''/* use the variables */}
-.main-header  {  
-  background-color:  ${primary_1};  ${// here you can put an inline comment
-''}  
-}
-`
+  /* use the variables */
+  ${"" /* use the variables */}
+  .main-header {
+    background-color: ${primary_1};
+    ${
+      // here you can put an inline comment
+      ""
+    }
+  }
+`;
 ```
 
 </TabItem>
@@ -183,17 +188,20 @@ ${''/* use the variables */}
 ```ts
 /* define primary colors */
 // Or define primary colors
-let primary_1:string = '#a2b9bc'
-let primary_2:string = '#b2ad7f'
+let primary_1: string = "#a2b9bc";
+let primary_2: string = "#b2ad7f";
 
 export default css`
-/* use the variables */  
-${''/* use the variables */}
-.main-header  {  
-  background-color:  ${primary_1};  ${// here you can put an inline comment
-''}  
-}
-`
+  /* use the variables */
+  ${"" /* use the variables */}
+  .main-header {
+    background-color: ${primary_1};
+    ${
+      // here you can put an inline comment
+      ""
+    }
+  }
+`;
 ```
 
 </TabItem>
@@ -202,15 +210,15 @@ ${''/* use the variables */}
 ```coffee
 ### define primary colors ###
 # Or define primary colors
-primary_1 = '#a2b9bc'  
-primary_2 = '#b2ad7f'  
+primary_1 = '#a2b9bc'
+primary_2 = '#b2ad7f'
 
 export default css"""
-/* use the variables */  
+/* use the variables */
 #{''### use the variables ###}
-.main-header  {  
+.main-header  {
   background-color:  #{primary_1};  #{# here you can put an inline comment
-''}  
+''}
 }
 """
 ```

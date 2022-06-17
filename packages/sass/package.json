@@ -12,8 +12,8 @@
   },
   "types": "dist/sass.d.ts",
   "scripts": {
-    "build": "microbundle",
-    "dev": "microbundle watch"
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
   },
   "keywords": [
     "style",
