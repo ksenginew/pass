@@ -30,6 +30,15 @@ importers:
         specifier: ^0.33.0
         version: 0.33.0
 
+  examples/cli:
+    devDependencies:
+      '@passlang/core':
+        specifier: workspace:^
+        version: link:../../packages/core
+      passlang:
+        specifier: workspace:^
+        version: link:../../packages/passlang
+
   examples/webpack:
     devDependencies:
       '@passlang/core':
@@ -173,6 +182,9 @@ importers:
       '@docusaurus/types':
         specifier: ^2.4.1
         version: 2.4.1(react-dom@17.0.2)(react@17.0.2)
+      '@stackblitz/sdk':
+        specifier: ^1.9.0
+        version: 1.9.0
 
 packages:
 
@@ -2971,6 +2983,10 @@ packages:
       p-map: 4.0.0
       webpack-sources: 3.2.3
     dev: false
+
+  /@stackblitz/sdk@1.9.0:
+    resolution: {integrity: sha512-3m6C7f8pnR5KXys/Hqx2x6ylnpqOak6HtnZI6T5keEO0yT+E4Spkw37VEbdwuC+2oxmjdgq6YZEgiKX7hM1GmQ==}
+    dev: true
 
   /@svgr/babel-plugin-add-jsx-attribute@6.5.1(@babel/core@7.22.9):
     resolution: {integrity: sha512-9PYGcXrAxitycIjRmZB+Q0JaN07GZIWaTBIGQzfaZv+qr1n8X1XUEJ5rZ/vx6OVD9RRYlrNnXWExQXcmZeD/BQ==}

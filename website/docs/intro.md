@@ -5,6 +5,20 @@ sidebar_position: 1
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import { useRef, useEffect } from 'react';
+import useIsBrowser from '@docusaurus/useIsBrowser';
+import sdk from '@stackblitz/sdk';
+
+export const StackEmbed = ({path}) => {
+  let url= `ksenginew/pass/tree/docs/`+path
+  const ref = useRef(null);
+  const isBrowser = useIsBrowser()
+  if(isBrowser && ref.current){
+    ref.current.innerHTML = '<div></div>'
+    console.log(11,sdk.embedGithubProject(ref.current.childNodes[0], url, {}));
+  }
+  return <div className="stack-preview" ref={ref}></div>
+}
 
 # Introduction
 
@@ -134,6 +148,10 @@ export default css"""
 </Tabs>
   
 So, when using Pass, and the primary color changes, you only need to change it in one place.
+
+
+<StackEmbed path="examples/cli"/>
+
 
 ## How Does Pass Work?
 

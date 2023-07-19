@@ -1,0 +1,18 @@
+{
+  "name": "cli-example",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "dev": "passlang src/styles.pass.ts -o=dist/main.css -d",
+    "build":"passlang src/styles.pass.ts -o=dist/main.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@passlang/core": "workspace:^",
+    "passlang": "workspace:^"
+  }
+}

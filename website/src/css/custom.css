@@ -28,3 +28,14 @@
   --ifm-color-primary-lightest: #ffffff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+.stack-preview {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+@media (min-width: 500px) {
+  .stack-preview {
+    aspect-ratio: 2/1;
+  }
+}

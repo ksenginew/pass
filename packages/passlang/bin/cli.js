@@ -2,8 +2,8 @@
 
 let minimist = require("minimist");
 let glob = require("glob");
-let { writeFileSync, watch, existsSync } = require("fs");
-let { resolve, normalize, sep } = require("path");
+let { writeFileSync, watch, existsSync, mkdirSync } = require("fs");
+let { resolve, normalize, sep,dirname } = require("path");
 let { compile, compileSync } = require("../dist/passlang.js");
 let { version } = require("../package.json");
 let argv = minimist(process.argv.slice(2));
@@ -20,6 +20,15 @@ Options:
   -i, --init PATH           Start a new project on the path.
 `;
 
+function ensureDir(filePath) {
+  var dir = dirname(filePath);
+  if (existsSync(dir)) {
+    return true;
+  }
+  ensureDir(dir);
+  mkdirSync(dir);
+}
+
 /**
  * @param {string} file
  * @param {number} files
@@ -30,7 +39,8 @@ function build(file, files) {
     if (files == 1) output = argv.o || argv.output || output;
     else if (argv.o || argv.output)
       output = resolve(argv.o || argv.output, output);
-    writeFileSync(output, compileSync(file));
+    ensureDir(output)
+    writeFileSync(output, compileSync(file), {});
     console.info(`Successfully built "${file}"`);
   } catch (error) {
     console.info(`Faild to build "${file}"\n`, error);
@@ -48,7 +58,7 @@ function dev(file, files) {
       if (fsWait) return;
       fsWait = true;
       setTimeout(() => {
-        build(file, files);
+        build("." + sep + normalize(file), files);
         fsWait = false;
       }, 100);
     }
@@ -66,9 +76,9 @@ if (argv.v || argv.version) {
   let files = [];
   argv._.forEach(
     (pattern) =>
-      (files = files.concat(
-        existsSync(pattern) ? pattern : glob.sync(pattern),
-      )),
+    (files = files.concat(
+      existsSync(pattern) ? pattern : glob.sync(pattern),
+    )),
   );
   console.info(`Processing ${files.length} files(${files[0] || ""}, ...)`);
   files.forEach((file) => {

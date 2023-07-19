@@ -24,7 +24,8 @@
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "2.4.1",
-    "@docusaurus/types": "^2.4.1"
+    "@docusaurus/types": "^2.4.1",
+    "@stackblitz/sdk": "^1.9.0"
   },
   "browserslist": {
     "production": [
