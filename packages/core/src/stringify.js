@@ -1,4 +1,7 @@
-export let stringify = (obj: any) => {
+/**
+ * @param {any} obj
+ */
+export function stringify(obj) {
   let out = "";
   for (let key in obj) {
     let val = obj[key];
@@ -6,10 +9,13 @@ export let stringify = (obj: any) => {
     else {
       val = Array.isArray(val) ? val : [val];
       out += val
-        .filter((v: any) => v != undefined)
-        .map((v: any) => key + (key[0] == "@" ? " " : ":") + v + ";")
+        .filter((/** @type {any} */ v) => v != undefined)
+        .map(
+          (/** @type {string} */ v) =>
+            key + (key[0] == "@" ? " " : ":") + v + ";",
+        )
         .join("");
     }
   }
   return out;
-};
+}

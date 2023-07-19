@@ -7,7 +7,7 @@
     "test": "vitest",
     "build": "pnpm -r --filter=./packages/* run build",
     "dev": "pnpm -r --parallel --filter=./packages/* run dev",
-    "format": "prettier --write ."
+    "format": "pnpx prettier --write ."
   },
   "repository": {
     "type": "git",
@@ -24,10 +24,8 @@
     "@rollup/plugin-commonjs": "^25.0.3",
     "@rollup/plugin-node-resolve": "^15.1.0",
     "@rollup/plugin-terser": "^0.4.3",
-    "@rollup/plugin-typescript": "^11.1.2",
     "@types/node": "^20.4.2",
     "rollup": "^3.26.3",
-    "typescript": "^5.1.6",
     "vitest": "^0.33.0"
   }
 }

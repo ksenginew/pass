@@ -30,5 +30,5 @@ export default createUnplugin(
         } else return code;
       },
     };
-  }
+  },
 );

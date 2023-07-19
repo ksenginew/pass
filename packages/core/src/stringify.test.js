@@ -16,7 +16,7 @@ describe("stringify", () => {
         ":hover": {
           color: "blue",
         },
-      })
+      }),
     ).toMatchInlineSnapshot(`"color:red;:hover{color:blue;}"`);
   });
 
@@ -30,7 +30,7 @@ describe("stringify", () => {
 
   test("array value", () => {
     expect(stringify({ color: ["red", "blue"] })).toMatchInlineSnapshot(
-      `"color{0:red;1:blue;}"`
+      `"color{0:red;1:blue;}"`,
     );
   });
 });

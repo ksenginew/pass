@@ -2,7 +2,7 @@
   "name": "@passlang/core",
   "version": "0.0.1",
   "description": "Heart of the Pass CSS preprocessor.",
-  "source": "src/index.ts",
+  "source": "src/index.js",
   "main": "dist/core.js",
   "type": "module",
   "umd:main": "dist/core.umd.js",

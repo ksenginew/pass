@@ -2,8 +2,9 @@
   "name": "rollup-plugin-pass",
   "version": "0.0.1",
   "description": "Rollup plugin for next generation CSS preprocessor.",
-  "source": "src/index.ts",
+  "source": "src/index.js",
   "main": "dist/loader.js",
+  "type": "module",
   "umd:main": "dist/loader.umd.js",
   "module": "dist/loader.esm.js",
   "exports": {

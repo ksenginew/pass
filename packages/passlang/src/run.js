@@ -3,31 +3,39 @@ import { Module, builtinModules, createRequire } from "module";
 import { dirname, extname, join, relative } from "path";
 import { platform } from "os";
 import vm from "vm";
-import { Transform, transform as sucrase } from "sucrase";
+import { transform as sucrase } from "sucrase";
 import { fileURLToPath } from "url";
 
 const isWindows = platform() === "win32";
 
-export function createRuntime(
-  file: string = process.cwd(),
-  parentModule?: typeof module
-) {
+/**
+ * @param {import("module")} [parentModule]
+ */
+export function createRuntime(file = process.cwd(), parentModule) {
   // If file is dir, createRequire goes with parent directory, so we need fakepath
   if (lstatSync(file).isDirectory()) file = join(file, "index.js");
 
   const nativeRequire = createRequire(
     isWindows
       ? file.replace(/\//g, "\\") // Import maps does not work with normalized paths!
-      : file
+      : file,
   );
 
-  const tryResolve = (id: string, options?: { paths?: string[] }) => {
+  /**
+   * @param {string} id
+   * @param { { paths?: string[] }} [options]
+   */
+  function tryResolve(id, options) {
     try {
       return nativeRequire.resolve(id, options);
     } catch (e) {}
-  };
+  }
 
-  const resolve = (id: string, options?: { paths?: string[] }) => {
+  /**
+   * @param {string} id
+   * @param { { paths?: string[] }} [options]
+   */
+  const resolve = (id, options) => {
     let resolved, err;
 
     // Try native require resolve
@@ -64,8 +72,14 @@ export function createRuntime(
   };
   resolve.paths = nativeRequire.resolve.paths;
 
-  function transform(source: string, filePath: string, ts: boolean): string {
-    const transforms: Transform[] = ["imports"];
+  /**
+   * @param {string} source
+   * @param {string} filePath
+   * @param {boolean} ts
+   */
+  function transform(source, filePath, ts) {
+    /** @type {import("sucrase").Transform[]} */
+    const transforms = ["imports"];
 
     if (ts) transforms.push("typescript");
 
@@ -82,10 +96,14 @@ export function createRuntime(
     return code;
   }
 
-  function runtime(id: string, src?: string) {
-    let source: string;
-    let filename: string;
-    let ext: string;
+  /**
+   * @param {string} id
+   * @param {string} [src]
+   */
+  function runtime(id, src) {
+    let source;
+    let filename;
+    let ext;
     if (src) {
       source = src;
       filename = id;
@@ -145,7 +163,7 @@ export function createRuntime(
         filename,
         lineOffset: 0,
         displayErrors: false,
-      }
+      },
     )();
 
     // Set as loaded

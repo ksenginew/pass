@@ -66,7 +66,9 @@ if (argv.v || argv.version) {
   let files = [];
   argv._.forEach(
     (pattern) =>
-      (files = files.concat(existsSync(pattern) ? pattern : glob.sync(pattern)))
+      (files = files.concat(
+        existsSync(pattern) ? pattern : glob.sync(pattern),
+      )),
   );
   console.info(`Processing ${files.length} files(${files[0] || ""}, ...)`);
   files.forEach((file) => {

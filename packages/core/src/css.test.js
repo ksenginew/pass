@@ -6,11 +6,9 @@ describe("css", () => {
   });
 
   test("normal string", () => {
-    expect(
-      css`
-        color: red;
-      `
-    ).toMatchInlineSnapshot(`
+    expect(css`
+      color: red;
+    `).toMatchInlineSnapshot(`
       "
               color: red;
             "
@@ -18,11 +16,9 @@ describe("css", () => {
   });
 
   test("with string as argument", () => {
-    expect(
-      css`
-        color: ${"red"};
-      `
-    ).toMatchInlineSnapshot(`
+    expect(css`
+      color: ${"red"};
+    `).toMatchInlineSnapshot(`
       "
               color: red;
             "
@@ -30,11 +26,9 @@ describe("css", () => {
   });
 
   test("with number", () => {
-    expect(
-      css`
-        order: ${1};
-      `
-    ).toMatchInlineSnapshot(`
+    expect(css`
+      order: ${1};
+    `).toMatchInlineSnapshot(`
       "
               order: 1;
             "
@@ -42,11 +36,9 @@ describe("css", () => {
   });
 
   test("with bigint", () => {
-    expect(
-      css`
-        order: ${1n};
-      `
-    ).toMatchInlineSnapshot(`
+    expect(css`
+      order: ${1n};
+    `).toMatchInlineSnapshot(`
       "
               order: 1;
             "
@@ -54,20 +46,16 @@ describe("css", () => {
   });
 
   test("with boolean", () => {
-    expect(
-      css`
-        order: ${true};
-      `
-    ).toMatchInlineSnapshot(`
+    expect(css`
+      order: ${true};
+    `).toMatchInlineSnapshot(`
       "
               order: true;
             "
     `);
-    expect(
-      css`
-        order: ${false};
-      `
-    ).toMatchInlineSnapshot(`
+    expect(css`
+      order: ${false};
+    `).toMatchInlineSnapshot(`
       "
               order: false;
             "
@@ -75,11 +63,9 @@ describe("css", () => {
   });
 
   test("with undefined", () => {
-    expect(
-      css`
-        order: ${undefined};
-      `
-    ).toMatchInlineSnapshot(`
+    expect(css`
+      order: ${undefined};
+    `).toMatchInlineSnapshot(`
       "
               order: ;
             "
@@ -87,11 +73,9 @@ describe("css", () => {
   });
 
   test("with null", () => {
-    expect(
-      css`
-        order: ${null};
-      `
-    ).toMatchInlineSnapshot(`
+    expect(css`
+      order: ${null};
+    `).toMatchInlineSnapshot(`
       "
               order: ;
             "

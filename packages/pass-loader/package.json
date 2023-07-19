@@ -2,7 +2,7 @@
   "name": "pass-loader",
   "version": "0.0.1",
   "description": "Webpack loader for next generation CSS preprocessor.",
-  "source": "src/index.ts",
+  "source": "src/index.js",
   "main": "dist/loader.js",
   "type": "module",
   "umd:main": "dist/loader.umd.js",

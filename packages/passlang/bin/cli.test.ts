@@ -46,15 +46,15 @@ describe("cli", () => {
   test("javascript file", () => {
     expect(
       execSync(
-        "node ./packages/passlang/bin/cli.js __test__/javascript.js"
-      ).toString()
+        "node ./packages/passlang/bin/cli.js __test__/javascript.js",
+      ).toString(),
     ).toMatchInlineSnapshot(`
       "Processing 1 files(__test__/javascript.js, ...)
       Successfully built \\".\\\\__test__\\\\javascript.js\\"
       "
     `);
     expect(
-      fs.readFileSync("__test__/javascript.css").toString()
+      fs.readFileSync("__test__/javascript.css").toString(),
     ).toMatchInlineSnapshot(`"js"`);
     fs.unlinkSync("__test__/javascript.css");
   });
@@ -62,22 +62,22 @@ describe("cli", () => {
   test("typescript file", () => {
     expect(
       execSync(
-        "node ./packages/passlang/bin/cli.js __test__/typescript.ts"
-      ).toString()
+        "node ./packages/passlang/bin/cli.js __test__/typescript.ts",
+      ).toString(),
     ).toMatchInlineSnapshot(`
       "Processing 1 files(__test__/typescript.ts, ...)
       Successfully built \\".\\\\__test__\\\\typescript.ts\\"
       "
     `);
     expect(
-      fs.readFileSync("__test__/typescript.css").toString()
+      fs.readFileSync("__test__/typescript.css").toString(),
     ).toMatchInlineSnapshot(`"ts"`);
     fs.unlinkSync("__test__/typescript.css");
   });
 
   test("multiple files", () => {
     expect(
-      execSync("node ./packages/passlang/bin/cli.js __test__/*").toString()
+      execSync("node ./packages/passlang/bin/cli.js __test__/*").toString(),
     ).toMatchInlineSnapshot(`
       "Processing 2 files(__test__/javascript.js, ...)
       Successfully built \\".\\\\__test__\\\\javascript.js\\"
@@ -85,11 +85,11 @@ describe("cli", () => {
       "
     `);
     expect(
-      fs.readFileSync("__test__/javascript.css").toString()
+      fs.readFileSync("__test__/javascript.css").toString(),
     ).toMatchInlineSnapshot(`"js"`);
     fs.unlinkSync("__test__/javascript.css");
     expect(
-      fs.readFileSync("__test__/typescript.css").toString()
+      fs.readFileSync("__test__/typescript.css").toString(),
     ).toMatchInlineSnapshot(`"ts"`);
     fs.unlinkSync("__test__/typescript.css");
   });

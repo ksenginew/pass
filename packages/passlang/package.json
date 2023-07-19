@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Next generation CSS preprocessor. It's programmatically awesome.",
   "bin": "bin/cli.js",
-  "source": "src/index.ts",
+  "source": "src/index.js",
   "main": "dist/passlang.js",
   "type": "module",
   "umd:main": "dist/passlang.umd.js",

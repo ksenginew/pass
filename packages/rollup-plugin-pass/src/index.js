@@ -1,5 +1,5 @@
-import { Plugin, rollup } from "rollup";
-import { createFilter, CreateFilter, FilterPattern } from "@rollup/pluginutils";
+import { rollup } from "rollup";
+import { createFilter } from "@rollup/pluginutils";
 import { parse as parseWasm, init } from "es-module-lexer";
 // @ts-ignore
 import { parse as parseJs } from "es-module-lexer/js"; // eslint-disable-line import/no-unresolved
@@ -13,27 +13,30 @@ init.then(() => {
   wasmParserInitialized = true;
 });
 
-export const parseEsm = (code: string): typeof parseWasm =>
+const parseEsm = (/** @type {string} */ code) =>
   wasmParserInitialized ? parseWasm(code) : parseJs(code);
 
-type Options = {
-  include: FilterPattern;
-  exclude: FilterPattern;
-};
-
-function pass({ include, exclude }: Options): Plugin {
+// @ts-ignore
+export function pass({ include, exclude }) {
   let filter = createFilter(include, exclude);
 
   return {
     name: "pass",
-    buildStart(options) {},
+    /**
+     * @param {any} options
+     */
+    buildStart(options) { },
+    /**
+     * @param {string} code
+     * @param {unknown} id
+     */
     async transform(code, id) {
       if (!filter(id)) return null;
 
       const magicString = new MagicString(code);
 
       return {
-        map: { mappings: "" as const },
+        map: { mappings: "" },
       };
     },
   };

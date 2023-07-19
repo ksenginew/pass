@@ -14,9 +14,9 @@ describe("rollup plugin", () => {
           (file) =>
             `${file.fileName}\n\n${
               file.type === "chunk" ? file.code : file.source
-            }`
+            }`,
         )
-        .join("\n\n\n")
+        .join("\n\n\n"),
     ).toMatchSnapshot();
   });
 });
