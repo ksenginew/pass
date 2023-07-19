@@ -1,8 +1,7 @@
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import terser from "@rollup/plugin-terser";
-import typescript from "@rollup/plugin-typescript";
-import pkg from "./package.json";
+import pkg from "./package.json" assert { type: 'json' };
 
 const banner = `/*!
  * ${pkg.name}
@@ -16,6 +15,7 @@ const banner = `/*!
  */`;
 
 const external = [
+  ...Object.keys(pkg.optionalDependencies || {}),
   ...Object.keys(pkg.peerDependencies || {}),
   ...Object.keys(pkg.dependencies || {}),
 ];
@@ -24,9 +24,9 @@ export default {
   external: external,
   input: pkg.source,
   output: [
-    { banner, file: pkg.main, format: "cjs", exports: "auto" },
-    { banner, file: pkg.module, format: "es", exports: "auto" },
-    {
+    pkg.main && { banner, file: pkg.main, format: "cjs", exports: "auto" },
+    pkg.module && { banner, file: pkg.module, format: "es", exports: "auto" },
+    pkg["umd:main"] && {
       banner,
       file: pkg["umd:main"],
       format: "umd",
@@ -41,5 +41,5 @@ export default {
       plugins: [terser()],
     },
   ],
-  plugins: [resolve(), commonjs(), typescript()],
+  plugins: [resolve(), commonjs()],
 };
