@@ -5,13 +5,13 @@
   "description": "",
   "main": "",
   "scripts": {
-    "dev": "passlang src/styles.pass.ts -o=dist/main.css -d",
-    "build":"passlang src/styles.pass.ts -o=dist/main.css"
+    "dev": "node ./node_modules/passlang/packages/passlang/bin/cli.js src/styles.pass.ts -o=dist/main.css -d",
+    "build":"node ./node_modules/passlang/packages/passlang/bin/cli.js src/styles.pass.ts -o=dist/main.css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "passlang": "ksenginew/pass#docs"
+    "pass": "https://codeload.github.com/ksenginew/pass/tar.gz/docs"
   }
 }
