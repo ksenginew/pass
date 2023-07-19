@@ -2,8 +2,9 @@
   "name": "pass-monorepo",
   "private": true,
   "version": "0.0.1",
+  "type": "module",
   "scripts": {
-    "test": "jest",
+    "test": "vitest",
     "build": "pnpm -r --filter=./packages/* run build",
     "dev": "pnpm -r --parallel --filter=./packages/* run dev",
     "format": "prettier --write ."
@@ -20,17 +21,13 @@
   },
   "homepage": "https://github.com/ksenginew/pass#readme",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^22.0.0",
-    "@rollup/plugin-node-resolve": "^13.3.0",
-    "@rollup/plugin-typescript": "^8.3.3",
-    "@types/jest": "^27.0.3",
-    "@types/node": "^18.0.0",
-    "jest": "^28.0.0",
-    "prettier": "^2.5.1",
-    "rollup": "^2.75.6",
-    "rollup-plugin-terser": "^7.0.2",
-    "ts-jest": "^28.0.5",
-    "tslib": "^2.4.0",
-    "typescript": "^4.5.4"
+    "@rollup/plugin-commonjs": "^25.0.3",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "@rollup/plugin-terser": "^0.4.3",
+    "@rollup/plugin-typescript": "^11.1.2",
+    "@types/node": "^20.4.2",
+    "rollup": "^3.26.3",
+    "typescript": "^5.1.6",
+    "vitest": "^0.33.0"
   }
 }

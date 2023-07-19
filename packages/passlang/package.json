@@ -5,6 +5,7 @@
   "bin": "bin/cli.js",
   "source": "src/index.ts",
   "main": "dist/passlang.js",
+  "type": "module",
   "umd:main": "dist/passlang.umd.js",
   "module": "dist/passlang.esm.js",
   "exports": {
@@ -36,12 +37,12 @@
   "homepage": "https://github.com/ksenginew/pass#readme",
   "dependencies": {
     "@passlang/core": "workspace:^",
-    "@types/glob": "^7.2.0",
+    "@types/glob": "^8.1.0",
     "@types/minimist": "^1.2.2",
-    "glob": "^8.0.3",
-    "globby": "^12.0.2",
-    "magic-string": "^0.26.2",
-    "minimist": "^1.2.5",
-    "sucrase": "^3.20.3"
+    "glob": "^10.3.3",
+    "globby": "^13.2.2",
+    "magic-string": "^0.30.1",
+    "minimist": "^1.2.8",
+    "sucrase": "^3.33.0"
   }
 }
