@@ -12,7 +12,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@passlang/core": "file:hidden/@passlang/core",
-    "passlang": "file:hidden/passlang"
+    "passlang": "ksenginew/pass#docs"
   }
 }

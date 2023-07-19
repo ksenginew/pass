@@ -32,12 +32,9 @@ importers:
 
   examples/cli:
     devDependencies:
-      '@passlang/core':
-        specifier: workspace:^
-        version: link:../../packages/core
       passlang:
-        specifier: workspace:^
-        version: link:../../packages/passlang
+        specifier: ksenginew/pass#docs
+        version: github.com/ksenginew/pass/1066008746a6357508a927ea1e2bc11891176bc8
 
   examples/webpack:
     devDependencies:
@@ -9621,3 +9618,9 @@ packages:
   /zwitch@1.0.5:
     resolution: {integrity: sha512-V50KMwwzqJV0NpZIZFwfOD5/lyny3WlSzRiXgA0G7VUnRlqttta1L6UQIHzd6EuBY/cHGfwTIck7w1yH6Q5zUw==}
     dev: false
+
+  github.com/ksenginew/pass/1066008746a6357508a927ea1e2bc11891176bc8:
+    resolution: {tarball: https://codeload.github.com/ksenginew/pass/tar.gz/1066008746a6357508a927ea1e2bc11891176bc8}
+    name: pass-monorepo
+    version: 0.0.1
+    dev: true
