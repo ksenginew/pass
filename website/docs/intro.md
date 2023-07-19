@@ -14,8 +14,14 @@ export const StackEmbed = ({path}) => {
   const ref = useRef(null);
   const isBrowser = useIsBrowser()
   if(isBrowser && ref.current){
-    ref.current.innerHTML = '<div></div>'
-    console.log(11,sdk.embedGithubProject(ref.current.childNodes[0], url, {}));
+    ref.current.innerHTML = '<div></div>';
+    (async function run(){
+      try{
+        await sdk.embedGithubProject(ref.current.childNodes[0], url, {})
+      }catch(error){
+        console.log(error)
+      }
+    })();
   }
   return <div className="stack-preview" ref={ref}></div>
 }

@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@passlang/core": "workspace:^",
-    "passlang": "workspace:^"
+    "@passlang/core": "file:hidden/@passlang/core",
+    "passlang": "file:hidden/passlang"
   }
 }
