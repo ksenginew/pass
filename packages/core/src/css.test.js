@@ -10,8 +10,8 @@ describe("css", () => {
       color: red;
     `).toMatchInlineSnapshot(`
       "
-              color: red;
-            "
+            color: red;
+          "
     `);
   });
 
@@ -20,8 +20,8 @@ describe("css", () => {
       color: ${"red"};
     `).toMatchInlineSnapshot(`
       "
-              color: red;
-            "
+            color: red;
+          "
     `);
   });
 
@@ -30,8 +30,8 @@ describe("css", () => {
       order: ${1};
     `).toMatchInlineSnapshot(`
       "
-              order: 1;
-            "
+            order: 1;
+          "
     `);
   });
 
@@ -40,8 +40,8 @@ describe("css", () => {
       order: ${1n};
     `).toMatchInlineSnapshot(`
       "
-              order: 1;
-            "
+            order: 1;
+          "
     `);
   });
 
@@ -50,15 +50,15 @@ describe("css", () => {
       order: ${true};
     `).toMatchInlineSnapshot(`
       "
-              order: true;
-            "
+            order: true;
+          "
     `);
     expect(css`
       order: ${false};
     `).toMatchInlineSnapshot(`
       "
-              order: false;
-            "
+            order: false;
+          "
     `);
   });
 
@@ -67,8 +67,8 @@ describe("css", () => {
       order: ${undefined};
     `).toMatchInlineSnapshot(`
       "
-              order: ;
-            "
+            order: ;
+          "
     `);
   });
 
@@ -77,8 +77,8 @@ describe("css", () => {
       order: ${null};
     `).toMatchInlineSnapshot(`
       "
-              order: ;
-            "
+            order: ;
+          "
     `);
   });
 });

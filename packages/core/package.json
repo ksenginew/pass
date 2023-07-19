@@ -4,13 +4,8 @@
   "description": "Heart of the Pass CSS preprocessor.",
   "source": "src/index.js",
   "main": "dist/core.js",
-  "type": "module",
   "umd:main": "dist/core.umd.js",
   "module": "dist/core.esm.js",
-  "exports": {
-    "require": "./dist/core.js",
-    "default": "./dist/core.modern.js"
-  },
   "types": "dist/core.d.ts",
   "scripts": {
     "build": "rollup -c",

@@ -4,7 +4,6 @@
   "description": "Sass support for next generation CSS preprocessor.",
   "source": "src/index.js",
   "main": "dist/sass.js",
-  "type": "module",
   "umd:main": "dist/sass.umd.js",
   "module": "dist/sass.esm.js",
   "exports": {

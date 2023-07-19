@@ -4,7 +4,6 @@
   "description": "Webpack loader for next generation CSS preprocessor.",
   "source": "src/index.js",
   "main": "dist/loader.js",
-  "type": "module",
   "umd:main": "dist/loader.umd.js",
   "module": "dist/loader.esm.js",
   "exports": {

@@ -1,9 +1,9 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`rollup plugin should work 1`] = `
+exports[`rollup plugin > should work 1`] = `
 "main.js
 
-var main = 'nothing';
+var main = \\"nothing\\";
 
 export { main as default };
 

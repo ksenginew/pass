@@ -1,4 +1,4 @@
-import css, { sass, scss } from "./index";
+import css, { sass, scss } from "./index.js";
 
 describe("sass", () => {
   test("default scss support", () => {

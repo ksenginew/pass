@@ -5,12 +5,11 @@
   "bin": "bin/cli.js",
   "source": "src/index.js",
   "main": "dist/passlang.js",
-  "type": "module",
   "umd:main": "dist/passlang.umd.js",
   "module": "dist/passlang.esm.js",
   "exports": {
     "require": "./dist/passlang.js",
-    "default": "./dist/passlang.modern.js"
+    "default": "./dist/passlang.esm.js"
   },
   "types": "dist/passlang.d.ts",
   "scripts": {

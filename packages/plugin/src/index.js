@@ -1,12 +1,12 @@
 import { createUnplugin } from "unplugin";
-import { FilterPattern, createFilter } from "@rollup/pluginutils";
+import { createFilter } from "@rollup/pluginutils";
 import { compileString } from "passlang";
 
 export default createUnplugin(
   /**
    * @param {{
-   *   include?: FilterPattern,
-   *   exclude?: FilterPattern,
+   *   include?: import("@rollup/pluginutils").FilterPattern,
+   *   exclude?: import("@rollup/pluginutils").FilterPattern,
    *   emit?: string,
    * }} options
    */
