@@ -7,21 +7,18 @@ var main = \\"nothing\\";
 
 export { main as default };
 
-
-
+-------------------------------------------------
 bundle.css
 
-
-  .main-header {
-    background-color: #a2b9bc;
+.main-header {
+    background-color:#a2b9bc;
   }
 
   .menu-left {
-    background-color: #b2ad7f;
+    background-color:#b2ad7f;
   }
 
   .menu-right {
-    background-color: #878f99;
-  }
-"
+    background-color:#878f99;
+  }"
 `;

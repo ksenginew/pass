@@ -32,9 +32,9 @@ importers:
 
   examples/cli:
     devDependencies:
-      passlang:
-        specifier: ksenginew/pass#docs
-        version: github.com/ksenginew/pass/1066008746a6357508a927ea1e2bc11891176bc8
+      pass:
+        specifier: https://codeload.github.com/ksenginew/pass/tar.gz/docs
+        version: '@codeload.github.com/ksenginew/pass/tar.gz/docs'
 
   examples/webpack:
     devDependencies:
@@ -74,7 +74,14 @@ importers:
 
   packages: {}
 
-  packages/core: {}
+  packages/core:
+    devDependencies:
+      '@types/css-tree':
+        specifier: ^2.3.1
+        version: 2.3.1
+      css-tree:
+        specifier: ^2.3.1
+        version: 2.3.1
 
   packages/pass-loader: {}
 
@@ -3185,6 +3192,10 @@ packages:
       '@types/node': 20.4.2
     dev: false
 
+  /@types/css-tree@2.3.1:
+    resolution: {integrity: sha512-3m636Jz4d9d+lHVMp6FNLsUWQrfOx1xpm1SBxPbQYSNNgXMe+XswcsDeo1ldyULiuzYyWKk1kmvkLTgNq+215Q==}
+    dev: true
+
   /@types/cssnano@5.1.0(postcss@8.4.26):
     resolution: {integrity: sha512-ikR+18UpFGgvaWSur4og6SJYF/6QEYHXvrIt36dp81p1MG3cAPTYDMBJGeyWa3LCnqEbgNMHKRb+FP0NrXtoWQ==}
     deprecated: This is a stub types definition. cssnano provides its own type definitions, so you do not need this installed.
@@ -4551,6 +4562,14 @@ packages:
     dependencies:
       mdn-data: 2.0.14
       source-map: 0.6.1
+
+  /css-tree@2.3.1:
+    resolution: {integrity: sha512-6Fv1DV/TYw//QF5IzQdqsNDjx/wc8TrMBZsqjL9eW01tWb7R7k/mq+/VXfJCl7SoD5emsJop9cOByJZfs8hYIw==}
+    engines: {node: ^10 || ^12.20.0 || ^14.13.0 || >=15.0.0}
+    dependencies:
+      mdn-data: 2.0.30
+      source-map-js: 1.0.2
+    dev: true
 
   /css-what@6.1.0:
     resolution: {integrity: sha512-HTUrgRJ7r4dsZKU6GjmpfRK1O76h97Z8MfS1G0FozR+oF2kG6Vfe8JE6zwrkbxigziPHinCJ+gCPjA9EaBDtRw==}
@@ -6507,6 +6526,10 @@ packages:
 
   /mdn-data@2.0.14:
     resolution: {integrity: sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow==}
+
+  /mdn-data@2.0.30:
+    resolution: {integrity: sha512-GaqWWShW4kv/G9IEucWScBx9G1/vsFZZJUO+tD26M8J8z3Kw5RDQjaoZe03YAClgeS/SWPOcb4nkFBTEi5DUEA==}
+    dev: true
 
   /mdurl@1.0.1:
     resolution: {integrity: sha512-/sKlQJCBYVY9Ers9hqzKou4H6V5UWc/M59TH2dvkt+84itfnq7uFOMLpOiOS4ujvHP4etln18fmIxA5R5fll0g==}
@@ -9619,8 +9642,8 @@ packages:
     resolution: {integrity: sha512-V50KMwwzqJV0NpZIZFwfOD5/lyny3WlSzRiXgA0G7VUnRlqttta1L6UQIHzd6EuBY/cHGfwTIck7w1yH6Q5zUw==}
     dev: false
 
-  github.com/ksenginew/pass/1066008746a6357508a927ea1e2bc11891176bc8:
-    resolution: {tarball: https://codeload.github.com/ksenginew/pass/tar.gz/1066008746a6357508a927ea1e2bc11891176bc8}
+  '@codeload.github.com/ksenginew/pass/tar.gz/docs':
+    resolution: {tarball: https://codeload.github.com/ksenginew/pass/tar.gz/docs}
     name: pass-monorepo
     version: 0.0.1
     dev: true

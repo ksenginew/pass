@@ -2,16 +2,42 @@ import { css } from "./css";
 
 describe("css", () => {
   test("empty string", () => {
-    expect(css``).toMatchInlineSnapshot(`""`);
+    expect(css``).toMatchInlineSnapshot(`
+      {
+        "children": [],
+        "loc": null,
+        "type": "Value",
+      }
+    `);
   });
 
   test("normal string", () => {
     expect(css`
       color: red;
     `).toMatchInlineSnapshot(`
-      "
-            color: red;
-          "
+      {
+        "children": [
+          {
+            "important": false,
+            "loc": null,
+            "property": "color",
+            "type": "Declaration",
+            "value": {
+              "children": [
+                {
+                  "loc": null,
+                  "name": "red",
+                  "type": "Identifier",
+                },
+              ],
+              "loc": null,
+              "type": "Value",
+            },
+          },
+        ],
+        "loc": null,
+        "type": "DeclarationList",
+      }
     `);
   });
 
@@ -19,9 +45,29 @@ describe("css", () => {
     expect(css`
       color: ${"red"};
     `).toMatchInlineSnapshot(`
-      "
-            color: red;
-          "
+      {
+        "children": [
+          {
+            "important": false,
+            "loc": null,
+            "property": "color",
+            "type": "Declaration",
+            "value": {
+              "children": [
+                {
+                  "loc": null,
+                  "name": "red",
+                  "type": "Identifier",
+                },
+              ],
+              "loc": null,
+              "type": "Value",
+            },
+          },
+        ],
+        "loc": null,
+        "type": "DeclarationList",
+      }
     `);
   });
 
@@ -29,9 +75,29 @@ describe("css", () => {
     expect(css`
       order: ${1};
     `).toMatchInlineSnapshot(`
-      "
-            order: 1;
-          "
+      {
+        "children": [
+          {
+            "important": false,
+            "loc": null,
+            "property": "order",
+            "type": "Declaration",
+            "value": {
+              "children": [
+                {
+                  "loc": null,
+                  "type": "Number",
+                  "value": "1",
+                },
+              ],
+              "loc": null,
+              "type": "Value",
+            },
+          },
+        ],
+        "loc": null,
+        "type": "DeclarationList",
+      }
     `);
   });
 
@@ -39,9 +105,29 @@ describe("css", () => {
     expect(css`
       order: ${1n};
     `).toMatchInlineSnapshot(`
-      "
-            order: 1;
-          "
+      {
+        "children": [
+          {
+            "important": false,
+            "loc": null,
+            "property": "order",
+            "type": "Declaration",
+            "value": {
+              "children": [
+                {
+                  "loc": null,
+                  "type": "Number",
+                  "value": "1",
+                },
+              ],
+              "loc": null,
+              "type": "Value",
+            },
+          },
+        ],
+        "loc": null,
+        "type": "DeclarationList",
+      }
     `);
   });
 
@@ -49,16 +135,56 @@ describe("css", () => {
     expect(css`
       order: ${true};
     `).toMatchInlineSnapshot(`
-      "
-            order: true;
-          "
+      {
+        "children": [
+          {
+            "important": false,
+            "loc": null,
+            "property": "order",
+            "type": "Declaration",
+            "value": {
+              "children": [
+                {
+                  "loc": null,
+                  "name": "true",
+                  "type": "Identifier",
+                },
+              ],
+              "loc": null,
+              "type": "Value",
+            },
+          },
+        ],
+        "loc": null,
+        "type": "DeclarationList",
+      }
     `);
     expect(css`
       order: ${false};
     `).toMatchInlineSnapshot(`
-      "
-            order: false;
-          "
+      {
+        "children": [
+          {
+            "important": false,
+            "loc": null,
+            "property": "order",
+            "type": "Declaration",
+            "value": {
+              "children": [
+                {
+                  "loc": null,
+                  "name": "false",
+                  "type": "Identifier",
+                },
+              ],
+              "loc": null,
+              "type": "Value",
+            },
+          },
+        ],
+        "loc": null,
+        "type": "DeclarationList",
+      }
     `);
   });
 
@@ -66,9 +192,23 @@ describe("css", () => {
     expect(css`
       order: ${undefined};
     `).toMatchInlineSnapshot(`
-      "
-            order: ;
-          "
+      {
+        "children": [
+          {
+            "important": false,
+            "loc": null,
+            "property": "order",
+            "type": "Declaration",
+            "value": {
+              "children": [],
+              "loc": null,
+              "type": "Value",
+            },
+          },
+        ],
+        "loc": null,
+        "type": "DeclarationList",
+      }
     `);
   });
 
@@ -79,6 +219,51 @@ describe("css", () => {
       "
             order: ;
           "
+    `);
+  });
+  test("complex", () => {
+    expect(css`
+      color: red;
+      @hihi (min-width: 100%){}
+    `).toMatchInlineSnapshot(`
+      {
+        "children": [
+          {
+            "important": false,
+            "loc": null,
+            "property": "color",
+            "type": "Declaration",
+            "value": {
+              "children": [
+                {
+                  "loc": null,
+                  "name": "red",
+                  "type": "Identifier",
+                },
+              ],
+              "loc": null,
+              "type": "Value",
+            },
+          },
+          {
+            "block": {
+              "children": [],
+              "loc": null,
+              "type": "Block",
+            },
+            "loc": null,
+            "name": "hihi",
+            "prelude": {
+              "loc": null,
+              "type": "Raw",
+              "value": "(min-width: 100%)",
+            },
+            "type": "Atrule",
+          },
+        ],
+        "loc": null,
+        "type": "DeclarationList",
+      }
     `);
   });
 });

@@ -29,5 +29,8 @@
     "url": "https://github.com/ksenginew/pass/issues"
   },
   "homepage": "https://github.com/ksenginew/pass#readme",
-  "dependencies": {}
+  "devDependencies": {
+    "@types/css-tree": "^2.3.1",
+    "css-tree": "^2.3.1"
+  }
 }
